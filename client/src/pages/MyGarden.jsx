@@ -9,3 +9,13 @@
 
 
 // onClick logic will be in this page to be able to see an individual flower
+
+function MyGarden(){
+    return(
+        <>
+        <p>This is the My Garden Page</p>
+        </>
+    )
+}
+
+export default MyGarden; 
