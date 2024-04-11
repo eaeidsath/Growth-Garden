@@ -13,7 +13,7 @@ function Navbar() {
       <ul className="nav-links">
         <li>
           <Link to="/dashboard"
-          className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+          className={currentPage === '/dashboard' ? 'nav-link active' : 'nav-link'}
           onClick={() => handleNavigationClick('dashboard')}>Dashboard</Link>
         </li>
         <li>
@@ -27,7 +27,8 @@ function Navbar() {
           onClick={() => handleNavigationClick('explore')}>Explore</Link>
         </li>
         <li>
-          <Link to="/logout">Log Out</Link>
+          {/* <Link to="/logout">Log Out</Link> */}
+          <button> Log Out </button>
         </li>
       </ul>
     </nav>
