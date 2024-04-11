@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import "./index.css";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -7,8 +7,8 @@ export default function App() {
 
   return (
     <>
-      <h1 className="rubik-scribble-regular">Growth Garden</h1>
-      <Navbar />
+      <Header /> 
+      
       <Outlet />
     </>
   )
