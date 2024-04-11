@@ -8,7 +8,8 @@ function LogIn(){
     
       const [signUpFormData, setSignUpFormData] = useState({
         signUpEmail: "",
-        signUpPassword: ""
+        signUpPassword: "",
+        username: ""
       });
     
       const handleSignInChange = (event) => {
@@ -58,6 +59,14 @@ function LogIn(){
     
           <form className="signup-form" onSubmit={handleSignUpSubmit}>
             <h2>Sign Up</h2>
+            <input
+              type="username"
+              name="signUpUsername"
+              placeholder="Username"
+              value={signUpFormData.username}
+              onChange={handleSignUpChange}
+              required
+            />
             <input
               type="email"
               name="signUpEmail"
