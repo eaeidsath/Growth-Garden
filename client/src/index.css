@@ -54,4 +54,34 @@
     font-weight: 400;
     font-style: normal;
   }
+
+  /* Navbar styling */
+  .navbar {
+    background-color: #c4bbbb; /* Change the background color of the navbar */
+    padding: 1rem;
+  }
+  
+  .nav-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Display links horizontally */
+    justify-content: flex-end; /* Align items to the right */
+  }
+  
+  .nav-link {
+    text-decoration: none; /* Remove default underline */
+    color: #000000; /* Set link color */
+    font-size: larger;
+    padding: 1rem; /* Add padding to links */
+  }
+  
+  .nav-link.active {
+    font-weight: bold; /* Make active link bold */
+    color: #0b5021; /* Change color of active link */
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
   
