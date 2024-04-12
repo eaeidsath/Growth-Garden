@@ -4,7 +4,7 @@ export default function FlowerPot({ id, name, goal, img }) {
   return (
     <div className="grid-item">
       <p>{img}</p>
-      <p>pot</p>
+      <p><img src="../../src/assets/flower-pot.png" /></p>
       <p>{goal}</p>
     </div>
   );

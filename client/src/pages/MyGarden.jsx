@@ -39,7 +39,7 @@ export default function MyGarden() {
   ];
 
   return (
-    <div className="grid-container">
+    <div className="grid-container garden">
       {flowers.map((flower) => (
         <Flower
           key={flower.id}

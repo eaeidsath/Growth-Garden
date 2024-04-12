@@ -6,67 +6,60 @@
   --mint-green: rgb(133, 200, 175);
   --dark-green: rgb(72, 145, 120);
   --coral: rgb(239, 122, 98);
+
+  /* Coolors palette from poppies.jpg */
+  --off-red-rgb: #ee0100ff;
+  --dark-moss-green: #566241ff;
+  --dark-moss-green-2: #31440eff;
+  --powder-blue: #a0c1e5ff;
+  --cambridge-blue: #739c92ff;
+  --chinese-violet: #85698cff;
+  --barn-red: #760202ff;
+  --columbia-blue: #c9d8eeff;
+  --beaver: #ae9682ff;
+  --dim-gray: #667069ff;
+
+  /* Font families */
+  --annie-use-your-telescope: "Annie Use Your Telescope", cursive;
+  --homemade-apple: "Homemade Apple", cursive;
+  --rubik-scribble: "Rubik Scribble", system-ui;
+  --quicksand: "Quicksand", sans-serif;
+  --lora: "Lora", serif;
+  --indie-flower: "Indie Flower", cursive;
 }
 
-/* Google Fonts CSS */
+/* Growth Garden Title*/
 
-/* Handwriting upright neat printing */
-.annie-use-your-telescope-regular {
-  font-family: "Annie Use Your Telescope", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Handwriting script looks like chalk */
-.homemade-apple-regular {
-  font-family: "Homemade Apple", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Organic-looking fat outlined letters */
-.rubik-scribble-regular {
-  font-family: "Rubik Scribble", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Plain sans-serif typeface */
-.quicksand-regular {
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Plain serif typeface */
-.lora-regular {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Handwriting plain printing with slight backwards slant */
-.indie-flower-regular {
-  font-family: "Indie Flower", cursive;
-  font-weight: 400;
-  font-style: normal;
+h1 {
+  font-family: var(--rubik-scribble);
+  font-size: 3rem;
+  text-align: center;
 }
 
 /* Grid container for flower pots */
+.garden {
+  background-image: url("../src/assets/soil.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: var(--annie-use-your-telescope);
+  font-size: 1.5rem;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
 }
 
 .grid-item {
   padding: 10px;
+  text-align: center;
+  vertical-align: bottom;
 }
 
 .grid-item img {
-  max-width: 100%;
+  max-width: 25%;
   height: auto;
 }
 
@@ -175,6 +168,7 @@
 }
 
 /* Styling for Activity Log */
+
 .flexSpaceBetween {
   display: inline-flex;
 }
