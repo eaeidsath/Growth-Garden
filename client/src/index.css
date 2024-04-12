@@ -167,7 +167,8 @@ h1 {
   object-fit: cover;
 }
 
-* Styling for Activity Log */
+/* Styling for Activity Log */
+
 .flexSpaceBetween {
   display: inline-flex;
 }
