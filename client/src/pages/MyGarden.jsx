@@ -9,7 +9,11 @@
 
 
 // onClick logic will be in this page to be able to see an individual flower
+// import { useQuery } from '@apollo/client';
+
 import ActivityLog from "../components/ActivityLog";
+
+
 
 function MyGarden(){
     return(
