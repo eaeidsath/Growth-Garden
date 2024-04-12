@@ -1,0 +1,53 @@
+[
+    {
+      "username": "Evelyn",
+      "email": "evelyn@techfriends.dev",
+      "password": "password01"
+    },
+    {
+      "username": "Benita",
+      "email": "benita@techfriends.dev",
+      "password": "password02"
+    },
+    {
+      "username": "Keri",
+      "email": "keri@techfriends.dev",
+      "password": "password03"
+    },
+    {
+      "username": "Sarun",
+      "email": "sarun@techfriends.dev",
+      "password": "password04"
+    },
+    {
+      "username": "Sarah",
+      "email": "sarah@techfriends.dev",
+      "password": "password05"
+    },
+    {
+      "username": "Manya",
+      "email": "manya@techfriends.dev",
+      "password": "password06"
+    },
+    {
+      "username": "Stephen",
+      "email": "stephen@techfriends.dev",
+      "password": "password07"
+    },
+    {
+      "username": "Dani",
+      "email": "dani@techfriends.dev",
+      "password": "password08"
+    },
+    {
+      "username": "Melissa",
+      "email": "melissa@techfriends.dev",
+      "password": "password09"
+    },
+    {
+      "username": "Gabrielle",
+      "email": "gabrielle@techfriends.dev",
+      "password": "password10"
+    }
+  ]
+  
