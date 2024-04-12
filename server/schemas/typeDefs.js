@@ -17,12 +17,26 @@ const typeDefs = `
         activities: [Activity]!
     }
 
+    type Activity {
+        _id: ID!
+        activityText: String
+        username: String
+        createdAt: String
+    }
+
     type Post {
         _id: ID
         postText: String
         username: String
         createdAt: String
         comments: [Comment]!
+    }
+
+    type Comment {
+        _id: ID!
+        commentText: String
+        username: String
+        createdAt: String
     }
 
     type Auth {
@@ -46,10 +60,12 @@ const typeDefs = `
         addActivity(goalId: ID!, activityText: String!, username: String!): Goal
         addPost(postText: String!, username: String!): Post
         addComment(postId: ID!, commentText: String!, username: String!): Post
+        addFriend(userId: ID!, friendID: ID!): User
         removeGoal(goalId: ID!): Goal
         removeActivity(goalId: ID!, activityId: ID!): Goal
         removePost(postId: ID!): Post
         removeComment(postId: ID!, commentId: ID!): Post
+        removeFriend(userId: ID!, friendID: ID!): User
     }
 `;
 

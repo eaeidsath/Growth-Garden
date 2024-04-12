@@ -1,13 +1,20 @@
 const { User, Goal, Post } = require('../models');
+const { populate } = require('../models/Post');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
     Query: {
         users: async () => {
-            return User.find().populate('goals');
+            return User.find().populate('posts').populate('friends').populate('goals').populate({
+                path: 'goals',
+                populate: 'activities'
+            });
         },
         user: async (parent, { userId }) => {
-            return User.findOne({ _id: userId }).populate('goals');
+            return User.findOne({ _id: userId }).populate('posts').populate('friends').populate('goals').populate({
+                path: 'goals',
+                populate: 'activities'
+            });
         },
         goals: async (parent, { username }) => {
             const params = username ? { username } : {};
@@ -92,6 +99,18 @@ const resolvers = {
                 }
             );
         },
+        addFriend: async (parent, { userId, friendId }) => {
+            return User.findOneAndUpdate(
+                { _id: userId },
+                {
+                    $addToSet: { friends: { friendId }}
+                },
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            );
+        },
         removeGoal: async (parent, { goalId }) => {
             return Goal.findOneAndDelete({ _id: goalId });
         },
@@ -112,6 +131,12 @@ const resolvers = {
                 { new: true }
             );
         },
+        removeFriend: async (parent, { userId, friendId }) => {
+            return User.findOneAndUpdate(
+                { _id: userId },
+                { $pull: { friends: { _id: friendId }}},
+            )
+        }
     },
 };
 
