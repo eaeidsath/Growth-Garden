@@ -1,22 +1,22 @@
-
-export function ActivityLog() {
+export function ActivityLog(/* goal, activity  */) {
   return (
     <>
       <div className="activityLogMain">
-        {/* TODO: Add dynamic JS variable here (refer to models) */}
-        <h2> Goal:  </h2>
+        <h2> Goal: User's Goal Here {/* goal.goalTitle */} </h2>
         <div>
-            {/* TODO: add flex properties so these are displayed 'space between' */}
+          {/* TODO: add flex properties so these are displayed 'space between' */}
+          <div className="flexSpaceBetween">
             <h3>Activity Log</h3>
-            <button> +New Activity </button>
-            <div>
-                {/* TODO: add dynamic JS variable for progress towards goals (look at models) */}
-                <ul>
-                    <li> Progress towards goal 1 </li>
-                    <li> Progress towards goal 1 </li>
-                    <li> Progress towards goal 1 </li>
-                </ul>
-            </div>
+            <button className="newActivityButton"> Add New Activity </button>
+          </div>
+          <div>
+            {/* TODO: create a map function that will reiterate every activity that the user has done  */}
+            <ul>
+              <li> Date | Progress log 1 towards goal 1 </li>
+              <li> Date | Progress log 2 towards goal 1 </li>
+              <li> Date | Progress log 3 towards goal 1 </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
