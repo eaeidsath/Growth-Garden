@@ -1,0 +1,237 @@
+[
+  {
+    "goalTitle": "Fitness",
+    "username": "Evelyn",
+    "activities": ["Take a 15-minute walk around the neighborhood"]
+  },
+  {
+    "goalTitle": "Nutrition",
+    "username": "Evelyn",
+    "activities": [
+      "Try a new healthy recipe for dinner",
+      "Plan your meals for the next day to eat healthier"
+    ]
+  },
+  {
+    "goalTitle": "Mindfulness",
+    "username": "Evelyn",
+    "activities": [
+      "Practice gratitude by keeping a daily journal",
+      "Take a moment to appreciate nature or go for a short hike",
+      "Write a positive affirmation and repeat it to yourself"
+    ]
+  },
+  {
+    "goalTitle": "Health",
+    "username": "Evelyn",
+    "activities": [
+      "Floss your teeth before bed"
+    ]
+  },
+  {
+    "goalTitle": "Sleep",
+    "username": "Evelyn",
+    "activities": ["Go to bed 30 minutes earlier than usual"]
+  },
+  {
+    "goalTitle": "Mental Stimulation",
+    "username": "Evelyn",
+    "activities": ["Listen to a motivational podcast or TED talk"]
+  },
+  {
+    "goalTitle": "Nutrition",
+    "username": "Benita",
+    "activities": [
+      "Plan a healthy snack for the afternoon to avoid unhealthy cravings"
+    ]
+  },
+  {
+    "goalTitle": "Mindfulness",
+    "username": "Benita",
+    "activities": [
+      "Take 5 minutes to visualize your goals and aspirations",
+      "Write down three things you accomplished today",
+      "Do a 5-minute meditation session to clear your mind"
+    ]
+  },
+  {
+    "goalTitle": "Relaxation",
+    "username": "Benita",
+    "activities": [
+      "Take a 10-minute break to enjoy a cup of tea or coffee",
+      "Listen to a calming playlist to unwind after a busy day"
+    ]
+  },
+  {
+    "goalTitle": "Mental Stimulation",
+    "username": "Benita",
+    "activities": ["Listen to a podcast or audiobook while doing chores"]
+  },
+  {
+    "goalTitle": "Home",
+    "username": "Benita",
+    "activities": [
+      "Water the plants in the morning",
+      "Do a mini-declutter session in a specific area of your home"
+    ]
+  },
+  {
+    "goalTitle": "Fitness",
+    "username": "Keri",
+    "activities": [
+      "Take the stairs instead of the elevator",
+      "Take a 15-minute walk in the park"
+    ]
+  },
+  {
+    "goalTitle": "Productivity",
+    "username": "Keri",
+    "activities": ["Write a to-do list for the next day"]
+  },
+  {
+    "goalTitle": "Mindfulness",
+    "username": "Keri",
+    "activities": [
+      "Write down three things you're grateful for",
+      "Write a thank-you note to a friend"
+    ]
+  },
+  {
+    "goalTitle": "Fun",
+    "username": "Keri",
+    "activities": [
+      "Try a new recipe for dinner",
+      "Read a chapter of a book before bed",
+      "Take a 10-minute break to enjoy a cup of tea or coffee"
+    ]
+  },
+  {
+    "goalTitle": "Home",
+    "username": "Keri",
+    "activities": ["Donate unused items to charity"]
+  },
+  {
+    "goalTitle": "Nutrition",
+    "username": "Sarun",
+    "activities": ["Have a healthy breakfast with fruits and protein"]
+  },
+  {
+    "goalTitle": "Fitness",
+    "username": "Sarah",
+    "activities": ["Stretch for 10 minutes before bed"]
+  },
+  {
+    "goalTitle": "Social",
+    "username": "Manya",
+    "activities": [
+      "Call or text a friend to catch up",
+      "Send a thank-you note or message to someone who helped you"
+    ]
+  },
+  {
+    "goalTitle": "Mental Stimulation",
+    "username": "Stephen",
+    "activities": [
+      "Read for at least 20 minutes before going to sleep",
+      "Try a new hobby or craft for 15 minutes"
+    ]
+  },
+  {
+    "goalTitle": "Nutrition",
+    "username": "Dani",
+    "activities": ["Prepare a nutritious lunch for tomorrow"]
+  },
+  {
+    "goalTitle": "Mindfulness",
+    "username": "Melissa",
+    "activities": [
+      "Take a few deep breaths and practice mindfulness for 5 minutes"
+    ]
+  },
+  {
+    "goalTitle": "Fitness",
+    "username": "Gabrielle",
+    "activities": ["Do a quick 10-minute home workout"]
+  },
+  {
+    "goalTitle": "Kindness",
+    "username": "Sarun",
+    "activities": [
+      "Do a random act of kindness for someone",
+      "Send a thank-you note or message to someone who helped you"
+    ]
+  },
+  {
+    "goalTitle": "Sleep",
+    "username": "Sarah",
+    "activities": ["Unplug from screens for an hour before bedtime"]
+  },
+  {
+    "goalTitle": "Productivity",
+    "username": "Manya",
+    "activities": ["Write down your goals for the week"]
+  },
+  {
+    "goalTitle": "Home",
+    "username": "Stephen",
+    "activities": ["Clean and declutter one area of your home"]
+  },
+  {
+    "goalTitle": "Relaxation",
+    "username": "Dani",
+    "activities": [
+      "Take a 5-minute break to stretch and relax",
+      "Practice deep breathing exercises for stress relief"
+    ]
+  },
+  {
+    "goalTitle": "Health",
+    "username": "Melissa",
+    "activities": ["Drink a glass of water before every meal", "Practice good posture throughout the day"]
+  },
+  {
+    "goalTitle": "Productivity",
+    "username": "Sarah",
+    "activities": ["Do a quick tidy-up of your workspace or desk"]
+  },
+  {
+    "goalTitle": "Fun",
+    "username": "Melissa",
+    "activities": ["Plan a fun activity or outing for the weekend"]
+  },
+  {
+    "goalTitle": "Fun",
+    "username": "Gabrielle",
+    "activities": ["Take a photo of something that makes you smile"]
+  },
+  {
+    "goalTitle": "Mindfulness",
+    "username": "Sarun",
+    "activities": ["Write a positive note to yourself and leave it where you'll see it"]
+  },
+  {
+    "goalTitle": "Mental Stimulation",
+    "username": "Sarah",
+    "activities": ["Learn a new word and try to use it in conversation"]
+  },
+  {
+    "goalTitle": "Kindness",
+    "username": "Manya",
+    "activities": ["Do a random act of kindness for a stranger"]
+  },
+  {
+    "goalTitle": "Finances",
+    "username": "Stephen",
+    "activities": ["Create a budget for the month and stick to it"]
+  },
+  {
+    "goalTitle": "Fitness",
+    "username": "Dani",
+    "activities": ["Try a new type of exercise or workout routine"]
+  },
+  {
+    "goalTitle": "Sleep",
+    "username": "Gabrielle",
+    "activities": ["Limit screen time before bedtime to improve sleep quality"]
+  }
+]
