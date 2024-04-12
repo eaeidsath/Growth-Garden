@@ -10,7 +10,7 @@ import Explore from "./pages/Explore.jsx";
 import MyGarden from "./pages/MyGarden.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn.jsx";
-
+import SingleGoal from "./pages/SingleGoal.jsx"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/explore",
         element: <Explore />,
+      },
+      {
+        //TODO: change this to "/goals/:goalId" when we have client queries set up
+        path: "/singlegoal",
+        element: <SingleGoal />,
       },
     ],
   },
