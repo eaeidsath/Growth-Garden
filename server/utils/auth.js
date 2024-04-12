@@ -6,11 +6,13 @@ const secret = process.env.SECRET;
 const expiration = '6h';
 
 module.exports = {
+  
   AuthenticationError: new GraphQLError('Could not authenticate user.', {
     extensions: {
       code: 'UNAUTHENTICATED',
     },
   }),
+
   authMiddleware: function ({ req }) {
     let token = req.body.token || req.query.token || req.headers.authorization;
 
@@ -31,6 +33,7 @@ module.exports = {
 
     return req;
   },
+
   signToken: function ({ email, username, _id }) {
     const payload = { email, username, _id };
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
