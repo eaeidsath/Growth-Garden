@@ -54,6 +54,22 @@
   font-style: normal;
 }
 
+/* Grid container for flower pots */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* sign in/ sign up page form styling */
 .signin-signup-container {
   display: flex;

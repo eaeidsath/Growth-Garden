@@ -9,13 +9,47 @@
 
 
 // onClick logic will be in this page to be able to see an individual flower
+import Flower from "../components/Flower";
 
-function MyGarden(){
-    return(
-        <>
-        <p>This is the My Garden Page</p>
-        </>
-    )
+export default function MyGarden() {
+  const flowers = [
+    {
+      id: 1,
+      name: "daisy",
+      goal: "Complete five push-ups",
+      img: "1",
+    },
+    {
+      id: 2,
+      name: "rose",
+      goal: "Run the 5K",
+      img: "2",
+    },
+    {
+      id: 3,
+      name: "daisy",
+      goal: "Read a book",
+      img: "1",
+    },
+    {
+      id: 4,
+      name: "petunia",
+      goal: "Finish portfolio",
+      img: "3",
+    },
+  ];
+
+  return (
+    <div className="grid-container">
+      {flowers.map((flower) => (
+        <Flower
+          key={flower.id}
+          id={flower.id}
+          name={flower.name}
+          goal={flower.goal}
+          img={flower.img}
+        />
+      ))}
+    </div>
+  );
 }
-
-export default MyGarden; 
