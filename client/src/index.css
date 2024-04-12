@@ -183,6 +183,7 @@
   background-color: var(--pale-peach);
   padding: 8px;
   width: fit-content;
+  margin-top: 10px;
 }
 
 .activityLogMain h3 {
