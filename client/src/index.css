@@ -62,7 +62,8 @@
   height: 40vh;
 }
 
-.signin-form, .signup-form {
+.signin-form,
+.signup-form {
   background-color: var(--pale-green);
   padding: 20px;
   border-radius: 8px;
@@ -71,13 +72,15 @@
   margin: 0 20px;
 }
 
-.signin-form h2, .signup-form h2 {
+.signin-form h2,
+.signup-form h2 {
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.signin-form input, .signup-form input {
+.signin-form input,
+.signup-form input {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -85,7 +88,8 @@
   border-radius: 4px;
 }
 
-.signin-form button, .signup-form button {
+.signin-form button,
+.signup-form button {
   width: 100%;
   padding: 10px;
   background-color: var(--dark-green);
@@ -96,18 +100,18 @@
   transition: background-color 0.3s ease;
 }
 
-.signin-form button:hover, .signup-form button:hover {
+.signin-form button:hover,
+.signup-form button:hover {
   background-color: #0056b3;
 }
 
-
 /* Navbar styling */
 .navbar {
-  background-color: var(--pale-peach); 
+  background-color: var(--pale-peach);
   padding: 1rem;
 }
 
-.navbar button{
+.navbar button {
   font-size: large;
   width: 100%;
   padding: 10px;
@@ -123,6 +127,7 @@
   list-style: none; /* Remove bullet points */
   padding: 0px; /* Remove default padding */
   margin: 0; /* Remove default margin */
+  margin-bottom: 1px;
   display: flex; /* Display links horizontally */
   justify-content: flex-end; /* Align items to the right */
 }
@@ -151,4 +156,37 @@
   ); /* Calculate the height based on the 16:9 aspect ratio */
   max-height: 200px; /* Optional: Set a maximum height to prevent the image from becoming too large */
   object-fit: cover;
+}
+
+/* Styling for Activity Log */
+.flexSpaceBetween {
+  display: inline-flex;
+}
+
+.activityLogMain {
+  background-color: var(--pale-peach);
+  padding: 8px;
+  width: fit-content;
+}
+
+.activityLogMain h3 {
+  margin-top: 1px;
+  margin-right: 1rem;
+  font-size: 25px;
+}
+
+.newActivityButton {
+  height: 40px; /* Adjust the height as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  padding: 10px;
+  background-color: var(--dark-green);
+  color: #fff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.activityLogMain li{
+  list-style-type: none;
 }
