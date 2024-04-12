@@ -25,5 +25,94 @@ const resolvers = {
         },
     },
 
-    
-}
+    Mutation: {
+        addUser: async (parent, { username, email, password }) => {
+            const user = await User.create({ username, email, password });
+            const token = signToken(user);
+            return { token, user };
+        },
+        login: async (parent, { email, password }) => {
+            const user = await User.findOne({ email });
+
+            if (!user) {
+                throw AuthenticationError;
+            }
+
+            const correctPw = await User.isCorrectPassword(password);
+
+            if (!correctPw) {
+                throw AuthenticationError
+            }
+
+            const token = signToken(user);
+
+            return { token, user};
+        },
+        addGoal: async (parent, { goalTitle, username }) => {
+            const goal = await Goal.create({ goalTitle, username });
+
+            await User.findOneAndUpdate(
+                { username: username },
+                { $addToSet: { goals: goal._id }}
+            );
+
+            return goal;
+        },
+        addActivity: async (parent, { goalId, activityText, username }) => {
+            return Goal.findOneAndUpdate(
+                { _id: goalId },
+                {
+                    $addToSet: { activities: { activityText, username }},
+                },
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            );
+        },
+        addPost: async (parent, { postText, username }) => {
+            const post = await Post.create({ postText, username });
+
+            await User.findOneAndUpdate(
+                { username: username },
+                { $addToSet: { posts: post._id }}
+            );
+
+            return post;
+        },
+        addComment: async (parent, { postId, commentText, username }) => {
+            return Post.findOneAndUpdate(
+                { _id: postId },
+                {
+                    $addToSet: { comments: { commentText, username }},
+                },
+                {
+                    new: true,
+                    runValidators: true,
+                }
+            );
+        },
+        removeGoal: async (parent, { goalId }) => {
+            return Goal.findOneAndDelete({ _id: goalId });
+        },
+        removeActivity: async (parent, { goalId, activityId }) => {
+            return Goal.findOneAndUpdate(
+                { _id: goalId },
+                { $pull: { activities: { _id: activityId }}},
+                { new: true }
+            );
+        },
+        removePost: async (parent, { postId }) => {
+            return Post.findOneAndDelete({ _id: postId });
+        },
+        removeComment: async (parent, { postId, commentId }) => {
+            return Post.findOneAndUpdate(
+                { _id: postId },
+                { $pull: { comments: { _id: commentId }}},
+                { new: true }
+            );
+        },
+    },
+};
+
+module.exports = resolvers;
