@@ -39,4 +39,4 @@ const goalSchema = new Schema({
 
 const Goal = model('goal', goalSchema);
 
-model.exports = Goal;
+module.exports = Goal;
