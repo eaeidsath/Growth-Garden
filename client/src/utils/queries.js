@@ -93,8 +93,8 @@ export const GET_SINGLE_GOAL = gql`
 
 //create query to get all posts for a user
 export const GET_POSTS = gql`
-    query getPosts($goalId: ID!) {
-        getPosts(goalId: $goalId) {
+    query getPosts($username: String!) {
+        getPosts(username: $username) {
             _id
             goalTitle
             username
