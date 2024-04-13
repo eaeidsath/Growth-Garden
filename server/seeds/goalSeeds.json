@@ -2,236 +2,444 @@
   {
     "goalTitle": "Fitness",
     "username": "Evelyn",
-    "activities": ["Take a 15-minute walk around the neighborhood"]
+    "activities": [
+      {
+        "activityText": "Take a 15-minute walk around the neighborhood",
+        "username": "Evelyn"
+      }
+    ]
   },
   {
     "goalTitle": "Nutrition",
     "username": "Evelyn",
     "activities": [
-      "Try a new healthy recipe for dinner",
-      "Plan your meals for the next day to eat healthier"
+      {
+        "activityText": "Try a new healthy recipe for dinner",
+        "username": "Evelyn"
+      },
+      {
+        "activityText": "Plan your meals for the next day to eat healthier",
+        "username": "Evelyn"
+      }
     ]
   },
   {
     "goalTitle": "Mindfulness",
     "username": "Evelyn",
-    "activities": [
-      "Practice gratitude by keeping a daily journal",
-      "Take a moment to appreciate nature or go for a short hike",
-      "Write a positive affirmation and repeat it to yourself"
+    "activities": [ {
+      "activityText": "Practice gratitude by keeping a daily journal",
+      "username": "Evelyn"
+    },
+    {
+      "activityText": "Take a moment to appreciate nature or go for a short hike",
+      "username": "Evelyn"
+    },
+    {
+      "activityText": "Write a positive affirmation and repeat it to yourself",
+      "username": "Evelyn"
+    }
     ]
   },
   {
     "goalTitle": "Health",
     "username": "Evelyn",
     "activities": [
-      "Floss your teeth before bed"
+      {
+        "activityText": "Floss your teeth before bed",
+        "username": "Evelyn"
+      }
     ]
   },
   {
     "goalTitle": "Sleep",
     "username": "Evelyn",
-    "activities": ["Go to bed 30 minutes earlier than usual"]
+    "activities": [
+      {
+        "activityText": "Go to bed 30 minutes earlier than usual",
+        "username": "Evelyn"
+      }
+    ]
   },
   {
     "goalTitle": "Mental Stimulation",
     "username": "Evelyn",
-    "activities": ["Listen to a motivational podcast or TED talk"]
+    "activities": [
+      {
+        "activityText": "Listen to a motivational podcast or TED talk",
+        "username": "Evelyn"
+      }
+    ]
   },
   {
     "goalTitle": "Nutrition",
     "username": "Benita",
     "activities": [
-      "Plan a healthy snack for the afternoon to avoid unhealthy cravings"
+      {
+        "activityText": "Plan a healthy snack for the afternoon to avoid unhealthy cravings",
+        "username": "Benita"
+      }
     ]
   },
   {
     "goalTitle": "Mindfulness",
     "username": "Benita",
     "activities": [
-      "Take 5 minutes to visualize your goals and aspirations",
-      "Write down three things you accomplished today",
-      "Do a 5-minute meditation session to clear your mind"
+      {
+        "activityText": "Take 5 minutes to visualize your goals and aspirations",
+        "username": "Benita"
+      },
+      {
+        "activityText": "Write down three things you accomplished today",
+        "username": "Benita"
+      },
+      {
+        "activityText": "Do a 5-minute meditation session to clear your mind",
+        "username": "Benita"
+      }
     ]
   },
   {
     "goalTitle": "Relaxation",
     "username": "Benita",
     "activities": [
-      "Take a 10-minute break to enjoy a cup of tea or coffee",
-      "Listen to a calming playlist to unwind after a busy day"
+      {
+        "activityText": "Take a 10-minute break to enjoy a cup of tea or coffee",
+        "username": "Benita"
+      },
+      {
+        "activityText": "Listen to a calming playlist to unwind after a busy day",
+        "username": "Benita"
+      }
     ]
   },
   {
     "goalTitle": "Mental Stimulation",
     "username": "Benita",
-    "activities": ["Listen to a podcast or audiobook while doing chores"]
+    "activities": [
+      {
+        "activityText": "Listen to a podcast or audiobook while doing chores",
+        "username": "Benita"
+      }
+  ]
   },
   {
     "goalTitle": "Home",
     "username": "Benita",
     "activities": [
-      "Water the plants in the morning",
-      "Do a mini-declutter session in a specific area of your home"
+      {
+        "activityText": "Water the plants in the morning",
+        "username": "Benita"
+      },
+      {
+        "activityText": "Do a mini-declutter session in a specific area of your home",
+        "username": "Benita"
+      }
     ]
   },
   {
     "goalTitle": "Fitness",
     "username": "Keri",
     "activities": [
-      "Take the stairs instead of the elevator",
-      "Take a 15-minute walk in the park"
+      {
+        "activityText": "Take the stairs instead of the elevator",
+        "username": "Keri"
+      },
+      {
+        "activityText": "Take a 15-minute walk in the park",
+        "username": "Keri"
+      }
     ]
   },
   {
     "goalTitle": "Productivity",
     "username": "Keri",
-    "activities": ["Write a to-do list for the next day"]
+    "activities": [
+      {
+        "activityText": "Write a to-do list for the next day",
+        "username": "Keri"
+      }
+    ]  
   },
   {
     "goalTitle": "Mindfulness",
     "username": "Keri",
     "activities": [
-      "Write down three things you're grateful for",
-      "Write a thank-you note to a friend"
+      {
+        "activityText": "Write down three things you're grateful for",
+        "username": "Keri"
+      },
+      {
+        "activityText": "Write a thank-you note to a friend",
+        "username": "Keri"
+      }
     ]
   },
   {
     "goalTitle": "Fun",
     "username": "Keri",
     "activities": [
-      "Try a new recipe for dinner",
-      "Read a chapter of a book before bed",
-      "Take a 10-minute break to enjoy a cup of tea or coffee"
+      {
+        "activityText": "Try a new recipe for dinner",
+        "username": "Keri"
+      },
+      {
+        "activityText": "Read a chapter of a book before bed",
+        "username": "Keri"
+      },
+      {
+        "activityText": "Take a 10-minute break to enjoy a cup of tea or coffee",
+        "username": "Keri"
+      }
     ]
   },
   {
     "goalTitle": "Home",
     "username": "Keri",
-    "activities": ["Donate unused items to charity"]
+    "activities": [
+      {
+        "activityText": "Donate unused items to charity",
+        "username": "Keri"
+      }
+    ]
   },
   {
     "goalTitle": "Nutrition",
     "username": "Sarun",
-    "activities": ["Have a healthy breakfast with fruits and protein"]
+    "activities": [
+      {
+        "activityText": "Have a healthy breakfast with fruits and protein",
+        "username": "Sarun"
+      }
+    ]
   },
   {
     "goalTitle": "Fitness",
     "username": "Sarah",
-    "activities": ["Stretch for 10 minutes before bed"]
+    "activities": [
+      {
+        "activityText": "Stretch for 10 minutes before bed",
+        "username": "Sarah"
+      }
+    ]
   },
   {
     "goalTitle": "Social",
     "username": "Manya",
     "activities": [
-      "Call or text a friend to catch up",
-      "Send a thank-you note or message to someone who helped you"
+      {
+        "activityText": "Call or text a friend to catch up",
+        "username": "Manya"
+      },
+      {
+        "activityText": "Send a thank-you note or message to someone who helped you",
+        "username": "Manya"
+      }
     ]
   },
   {
     "goalTitle": "Mental Stimulation",
     "username": "Stephen",
     "activities": [
-      "Read for at least 20 minutes before going to sleep",
-      "Try a new hobby or craft for 15 minutes"
+      {
+        "activityText": "Read for at least 20 minutes before going to sleep",
+        "username": "Stephen"
+      },
+      {
+        "activityText": "Try a new hobby or craft for 15 minutes",
+        "username": "Stephen"
+      }
     ]
   },
   {
     "goalTitle": "Nutrition",
     "username": "Dani",
-    "activities": ["Prepare a nutritious lunch for tomorrow"]
+    "activities": [
+      {
+        "activityText": "Prepare a nutritious lunch for tomorrow",
+        "username": "Dani"
+      }
+    ]
   },
   {
     "goalTitle": "Mindfulness",
     "username": "Melissa",
     "activities": [
-      "Take a few deep breaths and practice mindfulness for 5 minutes"
+      {
+        "activityText": "Take a few deep breaths and practice mindfulness for 5 minutes",
+        "username": "Melissa"
+      }
     ]
   },
   {
     "goalTitle": "Fitness",
     "username": "Gabrielle",
-    "activities": ["Do a quick 10-minute home workout"]
+    "activities": [
+      {
+        "activityText": "Do a quick 10-minute home workout",
+        "username": "Gabrielle"
+      }
+    ]
   },
   {
     "goalTitle": "Kindness",
     "username": "Sarun",
     "activities": [
-      "Do a random act of kindness for someone",
-      "Send a thank-you note or message to someone who helped you"
+      {
+        "activityText": "Do a random act of kindness for someone",
+        "username": "Sarun"
+      },
+      {
+        "activityText": "Send a thank-you note or message to someone who helped you",
+        "username": "Sarun"
+      }
     ]
   },
   {
     "goalTitle": "Sleep",
     "username": "Sarah",
-    "activities": ["Unplug from screens for an hour before bedtime"]
+    "activities": [
+      {
+        "activityText": "Unplug from screens for an hour before bedtime",
+        "username": "Sarah"
+      }
+    ]
   },
   {
     "goalTitle": "Productivity",
     "username": "Manya",
-    "activities": ["Write down your goals for the week"]
+    "activities": [
+      {
+        "activityText": "Write down your goals for the week",
+        "username": "Manya"
+      }
+    ]
   },
   {
     "goalTitle": "Home",
     "username": "Stephen",
-    "activities": ["Clean and declutter one area of your home"]
+    "activities": [
+      {
+        "activityText": "Clean and declutter one area of your home",
+        "username": "Stephen"
+      }
+    ]
   },
   {
     "goalTitle": "Relaxation",
     "username": "Dani",
     "activities": [
-      "Take a 5-minute break to stretch and relax",
-      "Practice deep breathing exercises for stress relief"
+      {
+        "activityText": "Take a 5-minute break to stretch and relax",
+        "username": "Dani"
+      },
+      {
+        "activityText": "Practice deep breathing exercises for stress relief",
+        "username": "Dani"
+      }
     ]
   },
   {
     "goalTitle": "Health",
     "username": "Melissa",
-    "activities": ["Drink a glass of water before every meal", "Practice good posture throughout the day"]
+    "activities": [
+      {
+        "activityText": "Drink a glass of water before every meal",
+        "username": "Melissa"
+      },
+      {
+        "activityText": "Practice good posture throughout the day",
+        "username": "Melissa"
+      }
+    ]
   },
   {
     "goalTitle": "Productivity",
     "username": "Sarah",
-    "activities": ["Do a quick tidy-up of your workspace or desk"]
+    "activities": [
+      {
+        "activityText": "Do a quick tidy-up of your workspace or desk",
+        "username": "Sarah"
+      }
+    ]
   },
   {
     "goalTitle": "Fun",
     "username": "Melissa",
-    "activities": ["Plan a fun activity or outing for the weekend"]
+    "activities": [
+      {
+        "activityText": "Plan a fun activity or outing for the weekend",
+        "username": "Melissa"
+      }
+    ]
   },
   {
     "goalTitle": "Fun",
     "username": "Gabrielle",
-    "activities": ["Take a photo of something that makes you smile"]
+    "activities": [
+      {
+        "activityText": "Take a photo of something that makes you smile",
+        "username": "Gabrielle"
+      }
+    ]
   },
   {
     "goalTitle": "Mindfulness",
     "username": "Sarun",
-    "activities": ["Write a positive note to yourself and leave it where you'll see it"]
+    "activities": [
+      {
+        "activityText": "Write a positive note to yourself and leave it where you'll see it",
+        "username": "Sarun"
+      }
+    ]
   },
   {
     "goalTitle": "Mental Stimulation",
     "username": "Sarah",
-    "activities": ["Learn a new word and try to use it in conversation"]
+    "activities": [
+      {
+        "activityText": "Learn a new word and try to use it in conversation",
+        "username": "Sarah"
+      }
+    ]
   },
   {
     "goalTitle": "Kindness",
     "username": "Manya",
-    "activities": ["Do a random act of kindness for a stranger"]
+    "activities": [
+      {
+        "activityText": "Do a random act of kindness for a stranger",
+        "username": "Manya"
+      }
+    ]
   },
   {
     "goalTitle": "Finances",
     "username": "Stephen",
-    "activities": ["Create a budget for the month and stick to it"]
+    "activities": [
+      {
+        "activityText": "Create a budget for the month and stick to it",
+        "username": "Stephen"
+      }
+    ]
   },
   {
     "goalTitle": "Fitness",
     "username": "Dani",
-    "activities": ["Try a new type of exercise or workout routine"]
+    "activities": [
+      {
+        "activityText": "Try a new type of exercise or workout routine",
+        "username": "Dani"
+      }
+    ]
   },
   {
     "goalTitle": "Sleep",
     "username": "Gabrielle",
-    "activities": ["Limit screen time before bedtime to improve sleep quality"]
+    "activities": [
+      {
+        "activityText": "Limit screen time before bedtime to improve sleep quality",
+        "username": "Gabrielle"
+      }
+    ]
   }
 ]
