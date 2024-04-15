@@ -11,6 +11,17 @@ const goalSchema = new Schema({
         type: String,
         required: true,
     },
+    category: {
+        type: String,
+        maxlength: 15
+    },
+    completed: {
+        type: Boolean
+    },
+    frequency: {
+        type: String,
+        required: true
+    },
     createdAt: {
         type: Date,
         default: Date.now,
@@ -23,10 +34,6 @@ const goalSchema = new Schema({
                 required: true,
                 minlength: 1,
                 maxlength: 280,
-            },
-            username: {
-                type: String,
-                required: true,
             },
             createdAt: {
                 type: Date,
