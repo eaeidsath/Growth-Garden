@@ -64,7 +64,7 @@ export const ADD_ACTIVITY = gql`
 
 // add a post 
 export const ADD_POST = gql`
-    mutation addPost($postText, String!, $username: String!) {
+    mutation addPost($postText: String!, $username: String!) {
         addPost(postText: $postText, username: $userName) {
             _id
             postText
