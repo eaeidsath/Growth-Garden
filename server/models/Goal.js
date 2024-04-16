@@ -35,10 +35,7 @@ const goalSchema = new Schema(
             get: (date) => date.toLocaleString(),
         },
         endDate: {
-            type: Date,
-            required: true,
-            default: (Date.now + 28800*60000),
-            get: (date) => date.toLocaleString()
+            type: String
         },
         activities: [
             {
