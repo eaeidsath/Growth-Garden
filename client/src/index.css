@@ -28,39 +28,16 @@
   --indie-flower: "Indie Flower", cursive;
 }
 
-/* Growth Garden Title*/
-
-h1 {
-  font-family: var(--rubik-scribble);
-  font-size: 3rem;
-  text-align: center;
-}
-
-/* Grid container for flower pots */
-.garden {
-  background-image: url("../src/assets/soil.jpg");
+body {
+  margin: 0;
+  background-image: url("/grass.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
-  font-family: var(--annie-use-your-telescope);
-  font-size: 1.5rem;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 10px;
-}
-
-.grid-item {
-  padding: 10px;
+h2 {
   text-align: center;
-  vertical-align: bottom;
-}
-
-.grid-item img {
-  max-width: 25%;
-  height: auto;
+  font-family: var(--homemade-apple);
 }
 
 /* sign in/ sign up page form styling */
@@ -114,57 +91,20 @@ h1 {
   background-color: #0056b3;
 }
 
-/* Navbar styling */
-.navbar {
-  background-color: var(--pale-peach);
+.nav-link {
+  text-decoration: none;
+  color: #000000;
+  font-size: larger;
   padding: 1rem;
 }
 
-.navbar button {
-  font-size: large;
-  width: 100%;
-  padding: 10px;
-  background-color: var(--dark-green);
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.nav-links {
-  list-style: none; /* Remove bullet points */
-  padding: 0px; /* Remove default padding */
-  margin: 0; /* Remove default margin */
-  margin-bottom: 1px;
-  display: flex; /* Display links horizontally */
-  justify-content: flex-end; /* Align items to the right */
-}
-
-.nav-link {
-  text-decoration: none; /* Remove default underline */
-  color: #000000; /* Set link color */
-  font-size: larger;
-  padding: 1rem; /* Add padding to links */
-}
-
 .nav-link.active {
-  font-weight: bold; /* Make active link bold */
-  color: #0b5021; /* Change color of active link */
+  font-weight: bold;
+  color: #0b5021;
 }
 
 .nav-link:hover {
   text-decoration: underline; /* Add underline on hover */
-}
-
-/* Styling for header  */
-.headerImage {
-  width: 100%; /* Set the width to 100% of the viewport width */
-  height: calc(
-    100vw * 9 / 16
-  ); /* Calculate the height based on the 16:9 aspect ratio */
-  max-height: 200px; /* Optional: Set a maximum height to prevent the image from becoming too large */
-  object-fit: cover;
 }
 
 /* Styling for Activity Log */
@@ -198,6 +138,6 @@ h1 {
   cursor: pointer;
 }
 
-.activityLogMain li{
+.activityLogMain li {
   list-style-type: none;
 }
