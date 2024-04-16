@@ -28,7 +28,7 @@ export default function Flower({ _id, flowerType, goal, activityLevel }) {
     <div className="grid-item">
       <div>
         
-        <Link to={`/singlegoal`}>
+        <Link to={`/singlegoal/${_id}`}>
           <img src={`/${flowerStage}`} />
         </Link>
       </div>

@@ -13,7 +13,7 @@ return (
       {goals.map((goals) => (
         <div key={goals._id}>
         <Flower
-          id={goals._id}
+          _id={goals._id}
           name={goals.flowerType}
           goal={goals.goalTitle}
           activityLevel={goals.activityLevel}

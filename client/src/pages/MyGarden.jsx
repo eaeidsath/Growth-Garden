@@ -26,7 +26,7 @@ export default function MyGarden() {
   const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: userParam },
   }); */
-  const { username } = "Evelyn"
+  const { username } = "Benita"
 
   const { loading, data } = useQuery(GET_GOALS, {
     variables: { username: username },
@@ -35,31 +35,31 @@ export default function MyGarden() {
   const user = data?.user || {};
   const goals = data?.goals || [
     {
-      _id: 1,
+      _id: '661df5f4952c1bc60c556172',
       flowerType: "daisy",
-      goalTitle: "Complete five push-ups",
-      activityLevel: 0
+      goalTitle: "Start a successful blog within the next 2 years",
+      activityLevel: 5
   
     },
     {
-      _id: 2,
+      _id: '661df5f4952c1bc60c556122',
       flowerType: "rose",
-      goalTitle: "Run the 5K",
-      activityLevel: 4
+      goalTitle: "Run a half-marathon in 2026",
+      activityLevel: 5
  
     },
     {
-      _id: 3,
+      _id: '661df5f4952c1bc60c5561a2',
       flowerType: "daisy",
-      goalTitle: "Read a book",
-      activityLevel: 6
+      goalTitle: "Volunteer abroad and make a difference in underserved communities",
+      activityLevel: 0
 
     },
     {
-      _id: 4,
+      _id: '661df5f4952c1bc60c5561ba',
       flowerType: "petunia",
-      goalTitle: "Finish portfolio",
-      activityLevel: 6
+      goalTitle: "Organize a charity event to support a cause I'm passionate about",
+      activityLevel: 1
     },
   ];
 
