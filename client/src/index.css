@@ -35,6 +35,12 @@ h1 {
   font-size: 3rem;
   text-align: center;
 }
+/* My Garden grid container */
+.large-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0px;
+}
 
 /* Grid container for flower pots */
 .garden {
@@ -46,21 +52,29 @@ h1 {
   font-size: 1.5rem;
 }
 
-.grid-container {
+.garden-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 10px;
 }
 
-.grid-item {
+.garden-item {
   padding: 10px;
   text-align: center;
   vertical-align: bottom;
 }
 
-.grid-item img {
+.garden-item img {
   max-width: 25%;
   height: auto;
+}
+
+/* Card for new goal */
+.card {
+  font-size: 2rem;
+  font-family: var(--quicksand);
+  border: 10px solid var(--dark-moss-green);
+  padding: 20px;
 }
 
 /* sign in/ sign up page form styling */

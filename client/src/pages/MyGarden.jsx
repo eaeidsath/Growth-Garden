@@ -1,3 +1,8 @@
+import { CreateNewGoal } from "../components/CreateNewGoal";
+import { ActivityLog } from "../components/ActivityLog";
+import { MyGoals } from "../components/MyGoals";
+import Flower from "../components/Flower";
+
 //Components needed in this file:
 // Flower.jsx (for an individual flower)
 // MyGoals.jsx (to display the user's goal log)
@@ -6,9 +11,7 @@
 
 //This file will hold the logic for rendering the growth of the garden (so this will have some html)
 // We should be able to map through an array to display all of the flowers in the general garden. We can use the code from the portfolio to help us with this.
-
 // onClick logic will be in this page to be able to see an individual flower
-import Flower from "../components/Flower";
 
 export default function MyGarden() {
   const flowers = [
@@ -39,16 +42,21 @@ export default function MyGarden() {
   ];
 
   return (
-    <div className="grid-container garden">
-      {flowers.map((flower) => (
-        <Flower
-          key={flower.id}
-          id={flower.id}
-          name={flower.name}
-          goal={flower.goal}
-          img={flower.img}
-        />
-      ))}
+    <div className="large-container">
+      <div className="garden-container garden">
+        {flowers.map((flower) => (
+          <Flower
+            key={flower.id}
+            id={flower.id}
+            name={flower.name}
+            goal={flower.goal}
+            img={flower.img}
+          />
+        ))}
+      </div>
+      <div className="card">
+        <CreateNewGoal />
+      </div>
     </div>
   );
 }
