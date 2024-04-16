@@ -20,6 +20,7 @@ const typeDefs = `
         createdAt: String
         endDate: String
         activities: [Activity]!
+        activityLevel: Int
     }
 
     type Activity {
