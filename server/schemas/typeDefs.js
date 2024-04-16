@@ -13,7 +13,12 @@ const typeDefs = `
         _id: ID
         goalTitle: String
         username: String
+        category: String
+        completed: Boolean
+        frequency: String
+        flowerType: String
         createdAt: String
+        endDate: String
         activities: [Activity]!
     }
 
@@ -51,21 +56,22 @@ const typeDefs = `
         goal(goalId: ID!): Goal
         posts(username: String!): [Post]
         post(postId: ID!): Post
+        me: User
     }
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addGoal(goalText: String!, username: String!): Goal
-        addActivity(goalId: ID!, activityText: String!, username: String!): Goal
-        addPost(postText: String!, username: String!): Post
-        addComment(postId: ID!, commentText: String!, username: String!): Post
-        addFriend(userId: ID!, friendID: ID!): User
+        addGoal(goalText: String!, category: String!, frequency: String!): Goal
+        addActivity(goalId: ID!, activityText: String!): Goal
+        addPost(postText: String!): Post
+        addComment(postId: ID!, commentText: String!): Post
+        addFriend(friendID: ID!): User
         removeGoal(goalId: ID!): Goal
         removeActivity(goalId: ID!, activityId: ID!): Goal
         removePost(postId: ID!): Post
         removeComment(postId: ID!, commentId: ID!): Post
-        removeFriend(userId: ID!, friendID: ID!): User
+        removeFriend(friendID: ID!): User
     }
 `;
 
