@@ -7,51 +7,70 @@
 // We should be able to map through an array to display all of the flowers in the general garden. We can use the code from the portfolio to help us with this.
 
 // link to view individual goal page is in the Flower.jsx component
-import Flower from "../components/Flower/Flower";
+import React from 'react';
+import { useQuery } from '@apollo/client';
+import { useParams } from 'react-router-dom';
+
+import FlowerGarden from '../components/FlowerGarden/FlowerGarden';
+// import goal list
+// import goal form
+
+import { QUERY_USER, GET_GOALS } from '../utils/queries';
+
+import Auth from '../utils/auth';
 
 export default function MyGarden() {
-  //this is representing the 'goals' array from a user's goals
-  const flowers = [
+
+/*   const { username: userParam } = useParams();
+
+  const { loading, data } = useQuery(QUERY_USER, {
+    variables: { username: userParam },
+  }); */
+  const { username } = "Evelyn"
+
+  const { loading, data } = useQuery(GET_GOALS, {
+    variables: { username: username },
+  });
+
+  const user = data?.user || {};
+  const goals = data?.goals || [
     {
-      id: 1,
-      name: "daisy",
-      goal: "Complete five push-ups",
+      _id: 1,
+      flowerType: "daisy",
+      goalTitle: "Complete five push-ups",
       activityLevel: 0
   
     },
     {
-      id: 2,
-      name: "rose",
-      goal: "Run the 5K",
+      _id: 2,
+      flowerType: "rose",
+      goalTitle: "Run the 5K",
       activityLevel: 4
  
     },
     {
-      id: 3,
-      name: "daisy",
-      goal: "Read a book",
+      _id: 3,
+      flowerType: "daisy",
+      goalTitle: "Read a book",
       activityLevel: 6
 
     },
     {
-      id: 4,
-      name: "petunia",
-      goal: "Finish portfolio",
+      _id: 4,
+      flowerType: "petunia",
+      goalTitle: "Finish portfolio",
       activityLevel: 6
     },
   ];
 
+  if(loading) {
+    return <div>Loading...</div>
+  }
   return (
-    <div className="grid-container garden">
-      {flowers.map((flower) => (
-        <Flower
-          key={flower.id}
-          id={flower.id}
-          name={flower.name}
-          goal={flower.goal}
-          activityLevel={flower.activityLevel}
-        />
-      ))}
+    <div>
+      <FlowerGarden
+        goals={goals}
+      />
     </div>
   );
 }

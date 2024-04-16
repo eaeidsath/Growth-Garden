@@ -11,6 +11,11 @@ export const QUERY_USER = gql`
                 _id
                 goalTitle
                 createdAt
+                category
+                flowerType
+                completed
+                endDate
+                activityLevel
                 activities {
                     _id
                     activityText

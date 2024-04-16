@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Flower({ _id, name, goal, activityLevel }) {
+export default function Flower({ _id, flowerType, goal, activityLevel }) {
 
   const [flowerStage, setFlowerStage] = useState("");
 
@@ -29,7 +29,7 @@ export default function Flower({ _id, name, goal, activityLevel }) {
       <div>
         
         <Link to={`/singlegoal`}>
-          <img src={`public/${flowerStage}`} />
+          <img src={`/${flowerStage}`} />
         </Link>
       </div>
       <div>
