@@ -35,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         //TODO: change this to "/goals/:goalId" when we have client queries set up
-        path: "/singlegoal",
+        path: "/singlegoal/:goalId",
         element: <SingleGoal />,
       },
     ],
