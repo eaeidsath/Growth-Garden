@@ -20,6 +20,7 @@ const typeDefs = `
         createdAt: String
         endDate: String
         activities: [Activity]!
+        activityLevel: Int
     }
 
     type Activity {
@@ -62,7 +63,7 @@ const typeDefs = `
     type Mutation {
         addUser(username: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addGoal(goalText: String!, category: String!, frequency: String!): Goal
+        addGoal(goalTitle: String!, category: String!, frequency: String!): Goal
         addActivity(goalId: ID!, activityText: String!): Goal
         addPost(postText: String!): Post
         addComment(postId: ID!, commentText: String!): Post
