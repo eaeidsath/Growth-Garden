@@ -1,13 +1,15 @@
 import { useState } from "react";
 
 import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../utils/mutations";
-import Auth from "../utile/auth";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
+
+import { SmallContainer } from "./SignUp";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
-    signUpEmail: "",
-    signUpPassword: "",
+    email: "",
+    password: "",
     username: "",
   });
 
@@ -31,8 +33,8 @@ function SignUp() {
     }
 
     setSignUpFormData({
-      signUpEmail: "",
-      signUpPassword: "",
+      email: "",
+      password: "",
       username: "",
     });
   };
@@ -43,7 +45,7 @@ function SignUp() {
         <h2>Sign Up</h2>
         <input
           type="username"
-          name="signUpUsername"
+          name="username"
           placeholder="Username"
           value={signUpFormData.username}
           onChange={handleSignUpChange}
@@ -51,22 +53,27 @@ function SignUp() {
         />
         <input
           type="email"
-          name="signUpEmail"
+          name="email"
           placeholder="Email"
-          value={signUpFormData.signUpEmail}
+          value={signUpFormData.email}
           onChange={handleSignUpChange}
           required
         />
         <input
           type="password"
-          name="signUpPassword"
+          name="password"
           placeholder="Password"
-          value={signUpFormData.signUpPassword}
+          value={signUpFormData.password}
           onChange={handleSignUpChange}
           required
         />
         <button type="submit">Sign Up</button>
       </form>
+      <SmallContainer>
+        <h2>
+          Already have an account? <a href="/"> Login! </a>
+        </h2>
+      </SmallContainer>
     </>
   );
 }
