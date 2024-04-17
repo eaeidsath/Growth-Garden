@@ -8,9 +8,9 @@ import { SmallContainer } from "./SignUp";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
-    signUpEmail: "",
-    signUpPassword: "",
-    signUpUsername: "",
+    email: "",
+    password: "",
+    username: "",
   });
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
@@ -33,8 +33,8 @@ function SignUp() {
     }
 
     setSignUpFormData({
-      signUpEmail: "",
-      signUpPassword: "",
+      email: "",
+      password: "",
       username: "",
     });
   };
@@ -45,7 +45,7 @@ function SignUp() {
         <h2>Sign Up</h2>
         <input
           type="username"
-          name="signUpUsername"
+          name="username"
           placeholder="Username"
           value={signUpFormData.username}
           onChange={handleSignUpChange}
@@ -53,17 +53,17 @@ function SignUp() {
         />
         <input
           type="email"
-          name="signUpEmail"
+          name="email"
           placeholder="Email"
-          value={signUpFormData.signUpEmail}
+          value={signUpFormData.email}
           onChange={handleSignUpChange}
           required
         />
         <input
           type="password"
-          name="signUpPassword"
+          name="password"
           placeholder="Password"
-          value={signUpFormData.signUpPassword}
+          value={signUpFormData.password}
           onChange={handleSignUpChange}
           required
         />
