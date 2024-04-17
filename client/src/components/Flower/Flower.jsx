@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FlowerCard, FlowerImg } from './Flower.styles';
 
 export default function Flower({ _id, name, goal, activityLevel }) {
 
@@ -25,16 +26,11 @@ export default function Flower({ _id, name, goal, activityLevel }) {
 
   // change link address to `/goals/${_id}` when main is updated
   return (
-    <div className="grid-item">
-      <div>
-        
+    <FlowerCard>
         <Link to={`/singlegoal`}>
-          <img src={`public/${flowerStage}`} />
+          <FlowerImg src={`/${flowerStage}`} />
         </Link>
-      </div>
-      <div>
         <p>{goal}</p>
-      </div>
-    </div>
+    </FlowerCard>
   );
 }
