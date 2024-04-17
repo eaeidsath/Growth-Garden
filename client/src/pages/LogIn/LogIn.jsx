@@ -8,8 +8,8 @@ import { SmallContainer } from "./LogIn.styles";
 
 function LogIn() {
   const [signInFormData, setSignInFormData] = useState({
-    signInEmail: "",
-    signInPassword: "",
+    email: "",
+    password: "",
   });
 
   const [login, { error }] = useMutation(LOGIN_USER);
@@ -32,8 +32,8 @@ function LogIn() {
     }
 
     setSignInFormData({
-      signInEmail: "",
-      signInPassword: "",
+      email: "",
+      password: "",
     });
   };
 
@@ -44,17 +44,17 @@ function LogIn() {
           <h2>Sign In</h2>
           <input
             type="email"
-            name="signInEmail"
+            name="email"
             placeholder="Email"
-            value={signInFormData.signInEmail}
+            value={signInFormData.email}
             onChange={handleSignInChange}
             required
           />
           <input
             type="password"
-            name="signInPassword"
+            name="password"
             placeholder="Password"
-            value={signInFormData.signInPassword}
+            value={signInFormData.password}
             onChange={handleSignInChange}
             required
           />
