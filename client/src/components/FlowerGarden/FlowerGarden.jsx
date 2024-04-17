@@ -14,8 +14,8 @@ return (
         <div key={goals._id}>
         <Flower
           _id={goals._id}
-          name={goals.flowerType}
-          goal={goals.goalTitle}
+          flowerType={goals.flowerType}
+          goalTitle={goals.goalTitle}
           activityLevel={goals.activityLevel}
         />
         </div>

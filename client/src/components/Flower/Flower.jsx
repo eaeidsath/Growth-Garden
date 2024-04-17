@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Flower({ _id, flowerType, goal, activityLevel }) {
+export default function Flower({ _id, flowerType, goalTitle, activityLevel }) {
 
   const [flowerStage, setFlowerStage] = useState("");
 
@@ -33,7 +33,7 @@ export default function Flower({ _id, flowerType, goal, activityLevel }) {
         </Link>
       </div>
       <div>
-        <p>{goal}</p>
+        <p>{goalTitle}</p>
       </div>
     </div>
   );

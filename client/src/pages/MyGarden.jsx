@@ -26,12 +26,12 @@ export default function MyGarden() {
   const { loading, data } = useQuery(QUERY_USER, {
     variables: { username: userParam },
   }); */
-  const { username } = "Benita"
+  const { username } = "Evelyn"
 
   const { loading, data } = useQuery(GET_GOALS, {
     variables: { username: username },
   });
-
+  
   const user = data?.user || {};
   const goals = data?.goals || [
     {
