@@ -17,7 +17,7 @@ color: white;
 font-family: var(--annie-use-your-telescope);
 font-size: 1.5rem;
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 gap: 10px;
 `;
 
@@ -25,6 +25,6 @@ export const GoalCard = styled.div`
 font-size: 2rem;
 font-family: var(--quicksand);
 border: 10px solid var(--dark-moss-green);
-padding: 20px;
+padding: 10px;
 background-color: var(--beaver);
 `;
