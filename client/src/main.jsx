@@ -11,7 +11,7 @@ import MyGarden from "./pages//MyGarden/MyGarden.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn/LogIn.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
-import SingleGoal from "./pages/SingleGoal.jsx";
+import SingleGoal from "./pages/SingleGoal/SingleGoal.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
