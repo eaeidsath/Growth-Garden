@@ -1,14 +1,16 @@
 import { useState } from "react";
 
 import { useMutation } from "@apollo/client";
-import { ADD_USER } from "../utils/mutations";
-import Auth from "../utils/auth";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
+
+import { SmallContainer } from "./SignUp";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
     signUpEmail: "",
     signUpPassword: "",
-    username: "",
+    signUpUsername: "",
   });
 
   const [addUser, { error, data }] = useMutation(ADD_USER);
@@ -67,6 +69,11 @@ function SignUp() {
         />
         <button type="submit">Sign Up</button>
       </form>
+      <SmallContainer>
+        <h2>
+          Already have an account? <a href="/"> Login! </a>
+        </h2>
+      </SmallContainer>
     </>
   );
 }
