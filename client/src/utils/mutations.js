@@ -28,7 +28,7 @@ export const ADD_USER = gql`
 
 // add a goal
 export const ADD_GOAL = gql`
-    mutation addGoal($goalTitle: String!, $category: String!, frequency: String!, flowerType: String, endDate: String) {
+    mutation addGoal($goalTitle: String!, $category: String!, $frequency: String!, $flowerType: String, $endDate: String) {
         addGoal(goalTitle: $goalTitle, category: $category, frequency: $frequency, flowerType: $flowerType, endDate: $endDate) {
             _id
             goalTitle
