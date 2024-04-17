@@ -261,35 +261,6 @@
     ]
   },
   {
-    "goalTitle": "Buy a house in 2027",
-    "username": "Gabrielle",
-    "category": "Finance",
-    "completed": 0,
-    "frequency": "monthly",
-    "activities": [
-      {
-        "activityText": "Researched mortgage options and spoke with lenders",
-        "createdAt": "2023-12-20"
-      },
-      {
-        "activityText": "Visited open houses in different neighborhoods",
-        "createdAt": "2024-01-17"
-      },
-      {
-        "activityText": "Saved extra money by packing lunch instead of eating out",
-        "createdAt": "2024-02-09"
-      },
-      {
-        "activityText": "Attended a homebuyer seminar to learn about the process",
-        "createdAt": "2024-03-17"
-      },
-      {
-        "activityText": "Visualized my dream home and created a vision board",
-        "createdAt": "2024-04-20"
-      }
-    ]
-  },
-  {
     "goalTitle": "Start a successful blog within the next 2 years",
     "username": "Evelyn",
     "category": "Skill-building",

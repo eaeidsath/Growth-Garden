@@ -32,8 +32,13 @@ export const ADD_GOAL = gql`
         addGoal(goalText: $goalText, username: $username) {
             _id
             goalTitle
-            username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText
@@ -50,8 +55,13 @@ export const ADD_ACTIVITY = gql`
         addActivity(goalId: $goalId, activityText: $activityText, username: $userName) {
             _id
             goalTitle
-            username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText
@@ -115,8 +125,13 @@ export const REMOVE_GOAL = gql`
         removeGoal(goalId: $goalId) {
             _id
             goalTitle
-            username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText
@@ -133,8 +148,13 @@ export const REMOVE_ACTIVITY = gql`
         removeActivity(goalId: $goalId, activityId: $activityId) {
             _id
             goalTitle
-            username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText

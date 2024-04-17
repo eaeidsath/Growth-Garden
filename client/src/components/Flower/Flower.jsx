@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FlowerCard, FlowerImg } from './Flower.styles';
 
 export default function Flower({ _id, flowerType, goalTitle, activityLevel }) {
 

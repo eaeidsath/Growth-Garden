@@ -12,8 +12,9 @@ export const QUERY_USER = gql`
                 goalTitle
                 createdAt
                 category
-                flowerType
                 completed
+                frequency
+                flowerType
                 endDate
                 activityLevel
                 activities {
@@ -42,6 +43,12 @@ export const QUERY_USER = gql`
                     goalTitle
                     createdAt
                     activities
+                    category
+                    completed
+                    frequency
+                    flowerType
+                    endDate
+                    activityLevel
                 }
                 posts {
                     _id
@@ -59,14 +66,50 @@ export const QUERY_USER = gql`
     }
 `;
 
+export const ALL_USERS = gql`
+    query allUsers {
+        users {
+            _id
+            username
+            email
+            goals {
+                _id
+                goalTitle
+                createdAt
+                category
+                completed
+                frequency
+                flowerType
+                endDate
+                activityLevel
+            }
+            posts {
+                _id
+                postText
+                createdAt
+            }
+            friends {
+                _id
+                username
+            }
+        }
+    }
+`
+
 //create query to all goals from one user
 export const GET_GOALS = gql`
-    query goals($username: String!) {
+    query getGoals($username: String!) {
         goals(username: $username) {
             _id
             goalTitle
             username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText
@@ -85,6 +128,12 @@ export const GET_SINGLE_GOAL = gql`
             goalTitle
             username
             createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
             activities {
                 _id
                 activityText
