@@ -32,7 +32,7 @@ export default function CreateNewGoal({ username }) {
 
   useEffect(() => {
     // Get the JWT token from local storage
-    const token = localStorage.getItem('jwtToken');
+    const token = localStorage.getItem('id_token');
     if (token) {
       // Decode the token to extract the username
       const decodedToken = jwt_decode(token);
@@ -57,7 +57,7 @@ export default function CreateNewGoal({ username }) {
   };
 
   const getUsernameFromToken = () => {
-    const token = localStorage.getItem('jwtToken');
+    const token = localStorage.getItem('id_token');
     if (token) {
       const decodedToken = jwt_decode(token);
       return decodedToken.username;
