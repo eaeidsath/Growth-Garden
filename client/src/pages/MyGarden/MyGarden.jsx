@@ -1,6 +1,6 @@
 import CreateNewGoal from "../../components/CreateNewGoal/CreateNewGoal";
 // import { ActivityLog } from "../components/ActivityLog";
-// import { MyGoals } from "../components/MyGoals";
+import MyGoals from "../../components/MyGoals/MyGoals";
 import Flower from "../../components/Flower/Flower";
 
 import { LargeContainer, GardenBox, GoalCard } from './MyGarden.styles';
@@ -48,9 +48,7 @@ export default function MyGarden() {
         ))}
       </GardenBox>
       <GoalCard>
-        {/* This should actually be the goals list with 'create */}
-        {/* new goal' as a modal. Will work on that tonight! */}
-        <CreateNewGoal />
+        <MyGoals />
       </GoalCard>
     </LargeContainer>
   );

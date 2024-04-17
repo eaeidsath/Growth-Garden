@@ -94,4 +94,4 @@ export default function CreateNewGoal() {
       <button type="submit">Submit</button>
     </form>
   );
-}
+};
