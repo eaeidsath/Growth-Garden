@@ -10,6 +10,7 @@ import Explore from "./pages/Explore.jsx";
 import MyGarden from "./pages//MyGarden/MyGarden.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn.jsx";
+import SignUp from "./pages/SignUp.jsx";
 import SingleGoal from "./pages/SingleGoal.jsx"
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LogIn />,
+      },
+      {
+        path: "/signin",
+        element: <SignUp />,
       },
       {
         path: "/mygarden",
