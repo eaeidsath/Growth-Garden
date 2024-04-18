@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FlowerCard, FlowerImg } from './Flower.styles';
 
-export default function Flower({ _id, name, goal, activityLevel }) {
+export default function Flower({ _id, flowerType, goalTitle, activityLevel }) {
 
   const [flowerStage, setFlowerStage] = useState("");
 
@@ -27,10 +27,10 @@ export default function Flower({ _id, name, goal, activityLevel }) {
   // change link address to `/goals/${_id}` when main is updated
   return (
     <FlowerCard>
-        <Link to={`/singlegoal`}>
+        <Link to={`/singlegoal/${_id}`}>
           <FlowerImg src={`/${flowerStage}`} />
         </Link>
-        <p>{goal}</p>
+        <p>{goalTitle}</p>
     </FlowerCard>
   );
 }
