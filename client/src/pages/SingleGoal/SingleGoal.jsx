@@ -1,9 +1,9 @@
-import ActivityLog from "../components/ActivityLog";
+import ActivityLog from "../../components/ActivityLog";
 
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 
-import { GET_SINGLE_GOAL } from "../utils/queries";
+import { GET_SINGLE_GOAL } from "../../utils/queries";
 
 export function SingleGoal() {
   const { goalId } = useParams();

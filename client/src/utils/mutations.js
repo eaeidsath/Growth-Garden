@@ -28,8 +28,8 @@ export const ADD_USER = gql`
 
 // add a goal
 export const ADD_GOAL = gql`
-    mutation addGoal($goalText: String!, $username: String!) {
-        addGoal(goalText: $goalText, username: $username) {
+    mutation addGoal($goalTitle: String!, $category: String!, $frequency: String!, $flowerType: String, $endDate: String) {
+        addGoal(goalTitle: $goalTitle, category: $category, frequency: $frequency, flowerType: $flowerType, endDate: $endDate) {
             _id
             goalTitle
             createdAt
@@ -51,8 +51,8 @@ export const ADD_GOAL = gql`
 
 // add an activity 
 export const ADD_ACTIVITY = gql`
-    mutation addActivity($goalId: ID!, $activityText: String!, $username: String!) {
-        addActivity(goalId: $goalId, activityText: $activityText, username: $userName) {
+    mutation addActivity($goalId: ID!, $activityText: String!) {
+        addActivity(goalId: $goalId, activityText: $activityText) {
             _id
             goalTitle
             createdAt
@@ -74,8 +74,8 @@ export const ADD_ACTIVITY = gql`
 
 // add a post 
 export const ADD_POST = gql`
-    mutation addPost($postText: String!, $username: String!) {
-        addPost(postText: $postText, username: $userName) {
+    mutation addPost($postText: String!) {
+        addPost(postText: $postText) {
             _id
             postText
             username
@@ -92,8 +92,8 @@ export const ADD_POST = gql`
 
 // add a comment
 export const ADD_COMMENT = gql`
-    mutation addComment($postId: ID!, $commentText: String!, $username: String!) {
-        addComment(postId: $postId, commentText: $commentText, username: $username) {
+    mutation addComment($postId: ID!, $commentText: String!) {
+        addComment(postId: $postId, commentText: $commentText) {
             _id
             postText
             username
