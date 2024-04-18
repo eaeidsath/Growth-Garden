@@ -1,12 +1,4 @@
 :root {
-  --pale-green: rgb(231, 243, 234);
-  --apple-green: rgb(169, 206, 123);
-  --pale-peach: rgb(253, 234, 223);
-  --violet: rgb(236, 97, 159);
-  --mint-green: rgb(133, 200, 175);
-  --dark-green: rgb(72, 145, 120);
-  --coral: rgb(239, 122, 98);
-
   /* Coolors palette from poppies.jpg */
   --off-red-rgb: #ee0100ff;
   --dark-moss-green: #566241ff;
@@ -38,6 +30,8 @@ body {
 h2 {
   text-align: center;
   font-family: var(--homemade-apple);
+  color: white;
+  font-size: 2.5rem;
 }
 
 /* sign in/ sign up page form styling */
