@@ -182,3 +182,24 @@ export const GET_SINGLE_POST = gql`
     }
 `;
 
+//get user data for myGarden
+export const QUERY_ME = gql`
+  query me {
+    me {
+        _id
+        username
+        email
+        goals {
+            _id
+            goalTitle
+            createdAt
+            category
+            completed
+            frequency
+            flowerType
+            endDate
+            activityLevel
+        }
+    }
+  }
+`;

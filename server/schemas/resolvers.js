@@ -10,7 +10,7 @@ const resolvers = {
             });
         },
         user: async (parent, { username }) => {
-            return User.findOne({ username: username }).populate('posts').populate('friends').populate('goals').populate({
+            return User.findOne({ username }).populate('posts').populate('friends').populate('goals').populate({
                 path: 'goals',
                 populate: 'activities'
             });

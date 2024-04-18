@@ -26,16 +26,11 @@ export default function Flower({ _id, flowerType, goalTitle, activityLevel }) {
 
   // change link address to `/goals/${_id}` when main is updated
   return (
-    <div className="grid-item">
-      <div>
-        
+    <FlowerCard>
         <Link to={`/singlegoal/${_id}`}>
-          <img src={`/${flowerStage}`} />
+          <FlowerImg src={`/${flowerStage}`} />
         </Link>
-      </div>
-      <div>
         <p>{goalTitle}</p>
-      </div>
-    </div>
+    </FlowerCard>
   );
 }

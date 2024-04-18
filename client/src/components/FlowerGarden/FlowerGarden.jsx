@@ -4,19 +4,19 @@ const FlowerGarden = ({
     goals
 }) => {
     if (!goals.length) {
-        return <h3>No goals have been created.</h3>
+      return <h3>No goals have been created.</h3>
     }
 
 
 return (
     <div className="grid-container garden">
-      {goals.map((goals) => (
-        <div key={goals._id}>
+      {goals && goals.map((goal) => (
+        <div key={goal._id}>
         <Flower
-          _id={goals._id}
-          flowerType={goals.flowerType}
-          goalTitle={goals.goalTitle}
-          activityLevel={goals.activityLevel}
+          _id={goal._id}
+          flowerType={goal.flowerType}
+          goalTitle={goal.goalTitle}
+          activityLevel={goal.activityLevel}
         />
         </div>
       ))}
