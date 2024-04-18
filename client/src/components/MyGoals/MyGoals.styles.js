@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { Link } from "react-router-dom";
 
 export const GoalHeader = styled.header`
   display: flex;
@@ -10,8 +11,7 @@ export const GoalHeader = styled.header`
 export const GoalItem = styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  border: 1px solid black;
+  margin-bottom: 10p;
 `;
 
 export const GoalIcon = styled.span`
@@ -22,4 +22,13 @@ export const GoalIcon = styled.span`
 
 export const GoalText = styled.span`
   font-size: 16px;
+`;
+
+export const GoalLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
 `;

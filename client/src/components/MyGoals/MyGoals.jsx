@@ -1,24 +1,38 @@
 import Modal from "../Modal/Modal";
 import { GoalHeader, GoalItem, GoalIcon, GoalText } from "./MyGoals.styles";
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import CreateNewGoal from "../CreateNewGoal/CreateNewGoal";
+import { Link } from "react-router-dom";
 
 export default function MyGoals({ goals }) {
-
-  const [icon, setIcon] = useState('');
+  const [icon, setIcon] = useState("");
 
   useEffect(() => {
-    checkIcon(goals.category)
-  });
+    checkIcon(goals.category);
+  }, [goals.category]);
 
-  const checkIcon = (x) => {
-
-    if (x === 'Fitness') {
-      setIcon('🏋🏽');
-    } else if (x === 'Education') {
-      setIcon('📚');
+  const checkIcon = (category) => {
+    switch (category) {
+      case "Fitness":
+        setIcon("🏋🏽");
+      case "Education":
+        setIcon("📚");
+      case "Finance":
+        setIcon("🏦");
+      case "Mindfulness":
+        setIcon("🧘🏽");
+      case "Career":
+        setIcon("🗄️");
+      case "Skill-building":
+        setIcon("🏆");
+      case "Travel":
+        setIcon("✈️");
+      case "Goodwill":
+        setIcon("🤗");
+      case "Productivity":
+        setIcon("🦸🏽");
     }
-  }
+  };
 
   return (
     <>
@@ -33,9 +47,11 @@ export default function MyGoals({ goals }) {
       <ul>
         {goals &&
           goals.map((goal) => (
-            <GoalItem>
+            <GoalItem key={goal._id}>
               <GoalIcon>{icon}</GoalIcon>
-              <GoalText>{goal.goalTitle}</GoalText>
+              <Link to={`/singlegoal/${goal._id}`}>
+                <GoalText>{goal.goalTitle}</GoalText>
+              </Link>
             </GoalItem>
           ))}
       </ul>
