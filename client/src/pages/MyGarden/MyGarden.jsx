@@ -37,7 +37,9 @@ export default function MyGarden() {
         </GardenBox>
 
         <GoalCard>
-          <MyGoals />
+          <MyGoals 
+            goals={user.goals}
+          />
         </GoalCard>
 
       </LargeContainer>
