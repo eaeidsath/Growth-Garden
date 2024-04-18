@@ -9,7 +9,7 @@ import Auth from "../../utils/auth";
 import { Link } from 'react-router-dom';
 
 
-export default function CreateNewGoal({}) {
+export default function CreateNewGoal({ closeModal }) {
   const [formData, setFormData] = useState({
     category: "",
     goalTitle: "",
@@ -144,6 +144,7 @@ export default function CreateNewGoal({}) {
         <br />
 
         <button type="submit">Submit</button>
+        <button onClick={closeModal}>Close Window</button>
       </form>
       ) : (
         //only show the form if the user is logged in. Otherwise, direct the user to the login or sign up page

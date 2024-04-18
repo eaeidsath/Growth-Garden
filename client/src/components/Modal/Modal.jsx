@@ -1,24 +1,21 @@
 import { useState } from 'react';
-import CreateNewGoal from '../CreateNewGoal/CreateNewGoal';
 import { ModalWrapper, Overlay } from './Modal.styles';
 
-export default function Modal() {
+export default function Modal({ buttonLabel, modalTitle, component: Component }) {
     const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleModal = () => {
-      setIsOpen(!isOpen);
-    };
+
+    const openModal = () => setIsOpen(true);
+    const closeModal = () => setIsOpen(false);
   
     return (
       <>
-      <button onClick={toggleModal}>Add New Goal</button>
+      <button onClick={openModal}>{buttonLabel}</button>
       {isOpen && (
         <>
-          <Overlay onClick={toggleModal} />
+          <Overlay onClick={closeModal} />
           <ModalWrapper>
-            <h2>Add New Goal</h2>
-            <CreateNewGoal />
-            <button onClick={toggleModal}>Close</button>
+            <h2>{modalTitle}</h2>
+            <Component closeModal={closeModal} />
           </ModalWrapper>
         </>
       )}
