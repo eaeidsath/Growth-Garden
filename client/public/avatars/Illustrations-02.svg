@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1455 1455" enable-background="new 0 0 1455 1455" xml:space="preserve">
+<g id="Background">
+	<circle fill="#F9ED32" cx="727.5" cy="727.5" r="697.7"/>
+</g>
+<g id="Color">
+	<path fill="#271002" d="M1201.1,1150.8H253.9V590.9c0-237.8,192.7-430.5,430.5-430.5h86.2c237.8,0,430.5,192.7,430.5,430.5V1150.8z
+		"/>
+	<circle fill="#CEAB97" cx="727.5" cy="657.5" r="456.9"/>
+	<g>
+		<path fill="#9C7761" d="M1217.8,750.5c0-25.1-14.1-46.9-34.8-58c-3.3,43.1-12.5,84.6-27,123.5
+			C1190.5,814,1217.8,785.5,1217.8,750.5z"/>
+		<path fill="#9C7761" d="M237.2,750.5c0,34.9,27.3,63.5,61.7,65.6c-14.4-39-23.7-80.4-27-123.5
+			C251.3,703.6,237.2,725.4,237.2,750.5z"/>
+	</g>
+	<circle fill="#3C2415" cx="526.9" cy="762.5" r="37"/>
+	<circle fill="#3C2415" cx="924.6" cy="762.5" r="37"/>
+	<ellipse fill="#B56654" cx="495.1" cy="885.6" rx="68.7" ry="39.4"/>
+	<ellipse fill="#B56654" cx="957.6" cy="885.6" rx="68.7" ry="39.4"/>
+	<path fill="none" stroke="#3C2415" stroke-width="18" stroke-linecap="round" stroke-miterlimit="10" d="M807.9,936.9
+		c-14.5,29.7-45.1,50.2-80.4,50.2c-37,0-68.8-22.5-82.4-54.6"/>
+	<path fill="#321B0F" d="M770.6,160.4h-86.2c-237.8,0-430.5,192.7-430.5,430.5v559.8h120V461.2c0-27.2,22-49.2,49.2-49.2h27.6v118.2
+		c0,40.3,32.7,73,73,73h407.5c40.3,0,73-32.7,73-73V412h27.6c27.2,0,49.2,22,49.2,49.2v689.6h120V590.9
+		C1201.1,353.2,1008.3,160.4,770.6,160.4z"/>
+</g>
+</svg>
