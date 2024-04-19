@@ -4,7 +4,15 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-import { SmallContainer, SignUpContainer, SignUpForm } from "./SignUp.styles";
+import {
+  Container,
+  BoxWrapper,
+  SignUpContainer,
+  Message,
+  SignUpForm,
+  TextInput,
+  SubmitButton,
+} from "./SignUp.styles";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
@@ -41,45 +49,48 @@ function SignUp() {
 
   return (
     <>
-    <SignUpContainer>
-      <SignUpForm onSubmit={handleSignUpSubmit}>
-        <h3>Sign Up</h3>
-        <input
-          type="text"
-          name="username"
-          placeholder="Username"
-          value={signUpFormData.username}
-          onChange={handleSignUpChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="text"
-          name="email"
-          placeholder="Email"
-          value={signUpFormData.email}
-          onChange={handleSignUpChange}
-          required
-        />
-        <br /><br />
-        <input
-          type="text"
-          name="password"
-          placeholder="Password"
-          value={signUpFormData.password}
-          onChange={handleSignUpChange}
-          required
-        />
-        <br /><br />
-        <button type="submit">Sign Up</button>
-      </SignUpForm>
-      
-      <SmallContainer>
-        <h3>
-          Already have an account? <a href="/"> Login! </a>
-        </h3>
-      </SmallContainer>
-      </SignUpContainer>
+      <Container>
+        <BoxWrapper>
+          <SignUpContainer>
+            <SignUpForm onSubmit={handleSignUpSubmit}>
+              <h3>Sign Up</h3>
+              <TextInput
+                name="username"
+                placeholder="Username"
+                value={signUpFormData.username}
+                onChange={handleSignUpChange}
+                required
+              />
+              <br />
+              <TextInput
+                name="email"
+                placeholder="Email"
+                value={signUpFormData.email}
+                onChange={handleSignUpChange}
+                required
+              />
+              <br />
+              <TextInput
+                name="password"
+                placeholder="Password"
+                value={signUpFormData.password}
+                onChange={handleSignUpChange}
+                required
+              />
+              <br />
+              <br />
+              <SubmitButton type="submit">Sign Up</SubmitButton>
+            </SignUpForm>
+          </SignUpContainer>
+          <SignUpContainer>
+            <Message>
+              <p>
+                Already have an account? <a href="/"> Login! </a>
+              </p>
+            </Message>
+          </SignUpContainer>
+        </BoxWrapper>
+      </Container>
     </>
   );
 }
