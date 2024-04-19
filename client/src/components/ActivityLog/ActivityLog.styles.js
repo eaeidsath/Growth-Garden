@@ -77,19 +77,3 @@ export const ListItem = styled.li`
   font-size: 1.5rem;
   line-height: 2;
 `;
-
-export const Button = styled.button`
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--dark-moss-green);
-  color: #fff;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: var(--quicksand);
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: var(--dark-moss-green-2)};
-  }
-`;
