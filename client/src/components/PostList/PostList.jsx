@@ -7,18 +7,20 @@ const PostList = ({
         return <h3>Add friends to see their posts here!</h3>
     }
 
+    console.log(friends);
+
     return (
-        <div>
-            {friends.map((friend) => {
-                friend.posts.map((post) => {
+        <MessageItem>
+            {friends.map((friend) => (
+                friend.posts.map((post) => (
                 <div key={post._id}>
+                    <p>{post.username}</p>
                     <p>Posted at {post.createdAt}</p>
                     <p>{post.postText}</p>
-                    <p>{post.username}</p>
                 </div>
-                })
-            })}
-        </div>
+                ))
+            ))}
+        </MessageItem>
     )
 };
 
