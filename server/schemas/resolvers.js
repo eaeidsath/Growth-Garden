@@ -31,9 +31,9 @@ const resolvers = {
         },
         me: async (parent, args, context) => {
             if (context.user) {
-                return User.findOne({ _id: context.user._id }).populate('posts').populate('friends').populate('goals').populate({
-                    path: 'goals',
-                    populate: 'activities'
+                return User.findOne({ _id: context.user._id }).populate('posts').populate('goals').populate('friends').populate({
+                    path: 'friends',
+                    populate: 'posts'
                 });
             }
             throw AuthenticationError;

@@ -28,38 +28,14 @@ export const QUERY_USER = gql`
                 postText
                 username
                 createdAt
-                comments {
-                    _id
-                    commentText
-                    username
-                    createdAt
-                }
             }
             friends {
                 _id
                 username
-                goals{
-                    _id
-                    goalTitle
-                    createdAt
-                    activities
-                    category
-                    completed
-                    frequency
-                    flowerType
-                    endDate
-                    activityLevel
-                }
                 posts {
                     _id
                     postText
                     createdAt
-                    comments {
-                        _id
-                        commentText
-                        username
-                        createdAt
-                    }
                 }
             }
         }
@@ -199,6 +175,21 @@ export const QUERY_ME = gql`
             flowerType
             endDate
             activityLevel
+        }
+        posts {
+            postText
+            username
+            createdAt
+            _id
+        }
+        friends {
+            username
+            posts {
+              username
+              postText
+              createdAt
+              _id
+            }
         }
     }
   }

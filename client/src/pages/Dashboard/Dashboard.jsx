@@ -3,31 +3,36 @@ import {
   BoardSidebar,
   MessageBoard,
   MessageGrid,
-  MessageItem,
 } from "./Dashboard.styles";
 import PostForm from "../../components/PostForm/PostForm";
 import PostList from "../../components/PostList/PostList";
 
-import { QUERY_USER } from '../../utils/queries';
+import { QUERY_ME } from '../../utils/queries';
 import { useQuery } from "@apollo/client";
 
 const Dashboard = () => {
 
-  const { loading, data } = useQuery(QUERY_USER);
-  const posts = data?.friends.posts || {};
+  const { loading, data } = useQuery(QUERY_ME);
 
+  const friends = data?.me.friends || {};
+
+  console.log(data);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <BoardContainer>
       <BoardSidebar>
         <h3>Add a Message</h3>
-        <MessageForm />
+        <PostForm />
       </BoardSidebar>
       <MessageBoard>
         <h2>Message Board</h2>
         <MessageGrid>
           <PostList
-            posts={posts}
+            friends={friends}
           />
         </MessageGrid>
       </MessageBoard>
