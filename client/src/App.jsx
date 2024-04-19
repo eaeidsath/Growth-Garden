@@ -1,4 +1,5 @@
 import Header from "./components/Header/Header";
+import GlobalStyle from './assets/Global.style';
 import "./index.css";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -34,6 +35,7 @@ export default function App() {
   return (
     <>
       <ApolloProvider client={client}>
+        <GlobalStyle />
         <Header />
 
         <Outlet />
