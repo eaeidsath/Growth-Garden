@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-import { SmallContainer } from "./SignUp";
+import { SmallContainer } from "./SignUp.styles";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
