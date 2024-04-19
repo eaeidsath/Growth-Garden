@@ -73,6 +73,7 @@ const typeDefs = `
         removePost(postId: ID!): Post
         removeComment(postId: ID!, commentId: ID!): Post
         removeFriend(friendID: ID!): User
+        updateGoal(goalId: ID!, updatedGoal: String!): Goal
     }
 `;
 
