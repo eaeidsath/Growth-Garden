@@ -6,6 +6,7 @@ import { useQuery, useMutation } from "@apollo/client";
 // import {QUERY_USER} from '../utils/queries';
 
 import NewActivityModal from "../../components/NewActivityModal/NewActivityModal";
+import Flower from "../Flower/Flower";
 
 import {
   Wrapper,
@@ -48,11 +49,15 @@ export default function ActivityLog() {
     <Wrapper>
       <CardContainer>
         <LeftSide>
-          {/* How to render a flower dynamically? */}
-          <FlowerImage src={`/stage_6.png`} alt="" />
+          <Flower
+            _id={goal._id}
+            flowerType={goal.flowerType}
+            goalTitle={goal.goalTitle}
+            activityLevel={goal.activityLevel}
+          />
         </LeftSide>
         <RightSide>
-          <Watermark src={`/badges/${goal.category}.png`} alt={goal.category} />
+          {/* <Watermark src={`/badges/${goal.category}.png`} alt={goal.category} /> */}
           <Headline>{goal.goalTitle}</Headline>
           <ActivityCard>
             <Subtitle>Activity Log</Subtitle>
