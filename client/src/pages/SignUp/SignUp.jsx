@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
-import { SmallContainer } from "./SignUp.styles";
+import { SmallContainer, SignUpContainer, SignUpForm } from "./SignUp.styles";
 
 function SignUp() {
   const [signUpFormData, setSignUpFormData] = useState({
@@ -41,39 +41,45 @@ function SignUp() {
 
   return (
     <>
-      <form className="signup-form" onSubmit={handleSignUpSubmit}>
-        <h2>Sign Up</h2>
+    <SignUpContainer>
+      <SignUpForm onSubmit={handleSignUpSubmit}>
+        <h3>Sign Up</h3>
         <input
-          type="username"
+          type="text"
           name="username"
           placeholder="Username"
           value={signUpFormData.username}
           onChange={handleSignUpChange}
           required
         />
+        <br /><br />
         <input
-          type="email"
+          type="text"
           name="email"
           placeholder="Email"
           value={signUpFormData.email}
           onChange={handleSignUpChange}
           required
         />
+        <br /><br />
         <input
-          type="password"
+          type="text"
           name="password"
           placeholder="Password"
           value={signUpFormData.password}
           onChange={handleSignUpChange}
           required
         />
+        <br /><br />
         <button type="submit">Sign Up</button>
-      </form>
+      </SignUpForm>
+      
       <SmallContainer>
-        <h2>
+        <h3>
           Already have an account? <a href="/"> Login! </a>
-        </h2>
+        </h3>
       </SmallContainer>
+      </SignUpContainer>
     </>
   );
 }

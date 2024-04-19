@@ -95,11 +95,14 @@ export default function ActivityLog() {
           <ActivityCard>
             <Subtitle>Activity Log</Subtitle>
             <div>
-              <button onClick={handleRemoveGoal}>Delete this goal</button>
+              <button onClick={() => setIsEditing(true)}>
+                Update this Goal
+              </button><br />
+              <button onClick={handleRemoveGoal}>Delete this Goal</button>
               <br />
               <NewActivityModal />
             </div>
-            <button onClick={() => setIsEditing(true)}>Update this Goal</button>
+
             {/* Render GoalForm only when isEditing is true */}
             {isEditing && (
               <UpdateGoalTitle

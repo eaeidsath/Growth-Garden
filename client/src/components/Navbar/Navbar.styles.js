@@ -10,7 +10,7 @@ export const Nav = styled.nav`
 export const NavButton = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: var(--dark-green);
+  background-color: var(--green);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -38,7 +38,7 @@ padding: 1rem;
 
 &.active {
     font-weight: bold;
-    color: #0b5021;
+    color: var(--green);
 }
 &:hover {
     text-decoration: underline;

@@ -1,39 +1,3 @@
-:root {
-  /* Coolors palette from poppies.jpg */
-  --off-red-rgb: #ee0100ff;
-  --dark-moss-green: #566241ff;
-  --dark-moss-green-2: #31440eff;
-  --powder-blue: #a0c1e5ff;
-  --cambridge-blue: #739c92ff;
-  --chinese-violet: #85698cff;
-  --barn-red: #760202ff;
-  --columbia-blue: #c9d8eeff;
-  --beaver: #ae9682ff;
-  --dim-gray: #667069ff;
-
-  /* Font families */
-  --annie-use-your-telescope: "Annie Use Your Telescope", cursive;
-  --homemade-apple: "Homemade Apple", cursive;
-  --rubik-scribble: "Rubik Scribble", system-ui;
-  --quicksand: "Quicksand", sans-serif;
-  --lora: "Lora", serif;
-  --indie-flower: "Indie Flower", cursive;
-}
-
-body {
-  margin: 0;
-  background-image: url("/grass.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
-h2 {
-  text-align: center;
-  font-family: var(--quicksand);
-  color: white;
-  font-size: 2.5rem;
-}
-
 /* sign in/ sign up page form styling */
 .signin-signup-container {
   display: flex;
