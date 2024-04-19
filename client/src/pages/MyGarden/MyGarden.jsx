@@ -1,11 +1,18 @@
 import { useQuery } from "@apollo/client";
+import { QUERY_ME } from "../../utils/queries";
 
+import CreateNewGoal from "../../components/CreateNewGoal/CreateNewGoal";
 import MyGoals from "../../components/MyGoals/MyGoals";
 import FlowerGarden from "../../components/FlowerGarden/FlowerGarden";
+import Modal from "../../components/Modal/Modal";
 
-import { LargeContainer, GardenBox, GoalCard } from "./MyGarden.styles";
-
-import { QUERY_ME } from "../../utils/queries";
+import {
+  LargeContainer,
+  GardenBox,
+  GoalCard,
+  GoalHeader,
+  Alert,
+} from "./MyGarden.styles";
 
 export default function MyGarden() {
   const { loading, data } = useQuery(QUERY_ME);
@@ -18,30 +25,32 @@ export default function MyGarden() {
 
   if (!user?.username) {
     return (
-      <h4>
-        You need to be logged in to see this. Use the navigation links above to
-        sign up or log in!
-      </h4>
+      <Alert>
+        You need to be logged in to view your garden. <br /><br />
+        Use the links above to sign up or log in.
+      </Alert>
     );
   }
 
   return (
     <>
-      <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
-        Welcome, {user.username}.
-      </h2>
+      <h2>Welcome, {user.username}.</h2>
       <LargeContainer>
-        
         <GardenBox>
           <FlowerGarden goals={user.goals} />
         </GardenBox>
 
         <GoalCard>
-          <MyGoals 
-            goals={user.goals}
-          />
+          <GoalHeader>
+            <h3>My Goals</h3>
+            <Modal
+              buttonLabel="+ New Goal"
+              modalTitle="Add New Goal"
+              component={CreateNewGoal}
+            />
+          </GoalHeader>
+          <MyGoals goals={user.goals} />
         </GoalCard>
-
       </LargeContainer>
     </>
   );
