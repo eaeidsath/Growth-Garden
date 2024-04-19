@@ -6,8 +6,8 @@ import "./index.css";
 
 //import all pages
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
-import Explore from "./pages/Explore.jsx";
-import MyGarden from "./pages//MyGarden/MyGarden.jsx";
+import Explore from "./pages/Explore/Explore.jsx";
+import MyGarden from "./pages/MyGarden/MyGarden.jsx";
 import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn/LogIn.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";

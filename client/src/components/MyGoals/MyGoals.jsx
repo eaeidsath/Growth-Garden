@@ -1,60 +1,46 @@
-import Modal from "../Modal/Modal";
-import { GoalHeader, GoalItem, GoalIcon, GoalText } from "./MyGoals.styles";
-import { useState, useEffect } from "react";
-import CreateNewGoal from "../CreateNewGoal/CreateNewGoal";
-import { Link } from "react-router-dom";
+import { GoalItem, GoalIcon, GoalText, GoalLink } from "./MyGoals.styles";
+
+const getIcon = (category) => {
+  switch (category) {
+    case "fitness":
+      return "🏋🏽";
+    case "education":
+      return "📚";
+    case "finance":
+      return "🏦";
+    case "mindfulness":
+      return "🧘🏽";
+    case "career":
+      return "🗄️";
+    case "skills":
+      return "🏆";
+    case "travel":
+      return "✈️";
+    case "goodwill":
+      return "🤗";
+    case "productivity":
+      return "🦸🏽";
+    default:
+      return "";
+  }
+};
 
 export default function MyGoals({ goals }) {
-  const [icon, setIcon] = useState("");
-
-  useEffect(() => {
-    checkIcon(goals.category);
-  }, [goals.category]);
-
-  const checkIcon = (category) => {
-    switch (category) {
-      case "Fitness":
-        setIcon("🏋🏽");
-      case "Education":
-        setIcon("📚");
-      case "Finance":
-        setIcon("🏦");
-      case "Mindfulness":
-        setIcon("🧘🏽");
-      case "Career":
-        setIcon("🗄️");
-      case "Skill-building":
-        setIcon("🏆");
-      case "Travel":
-        setIcon("✈️");
-      case "Goodwill":
-        setIcon("🤗");
-      case "Productivity":
-        setIcon("🦸🏽");
-    }
-  };
-
   return (
-    <>
-      <GoalHeader>
-        <h3>My Goals</h3>
-        <Modal
-          buttonLabel="Add New Goal"
-          modalTitle="Add New Goal"
-          component={CreateNewGoal}
-        />
-      </GoalHeader>
-      <ul>
-        {goals &&
-          goals.map((goal) => (
+    <ul>
+      {goals &&
+        goals.map((goal) => {
+          const icon = getIcon(goal.category);
+
+          return (
             <GoalItem key={goal._id}>
               <GoalIcon>{icon}</GoalIcon>
-              <Link to={`/singlegoal/${goal._id}`}>
+              <GoalLink to={`/singlegoal/${goal._id}`}>
                 <GoalText>{goal.goalTitle}</GoalText>
-              </Link>
+              </GoalLink>
             </GoalItem>
-          ))}
-      </ul>
-    </>
+          );
+        })}
+    </ul>
   );
 }

@@ -1,13 +1,6 @@
 import { styled } from "styled-components";
 import { Link } from "react-router-dom";
 
-export const GoalHeader = styled.header`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-`;
-
 export const GoalItem = styled.li`
   display: flex;
   align-items: center;
@@ -27,7 +20,12 @@ export const GoalText = styled.span`
 export const GoalLink = styled(Link)`
   text-decoration: none;
   color: black;
-  &:visited {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--powder-blue);
+  }
+  &:active{
     text-decoration: none;
     color: black;
   }
