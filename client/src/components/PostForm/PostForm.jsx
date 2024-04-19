@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { NoteText, Category, SubmitButton } from './MessageForm.styles';
+import { NoteText, Category, SubmitButton } from './PostForm.styles';
 
-export default function MessageForm() {
+export default function PostForm() {
   const [formData, setFormData] = useState({
     // username
     postTextInput: "",

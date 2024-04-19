@@ -5,7 +5,7 @@ import {
   MessageGrid,
   MessageItem,
 } from "./Dashboard.styles";
-import MessageForm from "../../components/MessageForm/MessageForm";
+import PostForm from "../../components/PostForm/PostForm";
 
 function Dashboard() {
   return (
