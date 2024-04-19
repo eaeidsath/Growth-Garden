@@ -1,4 +1,4 @@
-import ActivityLog from "../../components/ActivityLog";
+import ActivityLog from '../../components/ActivityLog/ActivityLog';
 
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
@@ -21,11 +21,7 @@ export function SingleGoal() {
     return <div>Loading...</div>;
   }
 
-  return (
-    <>
-      <ActivityLog />
-    </>
-  );
+  return <ActivityLog />;
 }
 
 export default SingleGoal;
