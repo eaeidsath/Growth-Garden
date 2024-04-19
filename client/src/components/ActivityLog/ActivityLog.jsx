@@ -1,11 +1,14 @@
 import { useParams, useNavigate } from "react-router-dom";
 
+import { useState } from "react";
+
 import { GET_SINGLE_GOAL } from "../../utils/queries";
-import { REMOVE_GOAL } from "../../utils/mutations";
+import { REMOVE_GOAL, UPDATE_GOAL } from "../../utils/mutations";
 import { useQuery, useMutation } from "@apollo/client";
-// import {QUERY_USER} from '../utils/queries';
 
 import NewActivityModal from "../../components/NewActivityModal/NewActivityModal";
+import UpdateGoalTitle from "../../components/UpdateGoalTitle/UpdateGoalTitle";
+
 import Flower from "../Flower/Flower";
 
 import {
@@ -28,6 +31,36 @@ export default function ActivityLog() {
     variables: { goalId: goalId },
   });
   const navigate = useNavigate();
+
+  //UPDATE GOAL CODE --
+  //useState hook to edit a goal title
+  const [editedGoalTitle, setEditedGoalTitle] = useState(" ");
+  const [updateGoal] = useMutation(UPDATE_GOAL);
+  const handleUpdateGoal = async () => {
+    try {
+      await updateGoal({
+        variables: { goalId: goalId, updatedGoal: editedGoalTitle },
+      });
+      // Refetch the goal data to display the updated title
+      // refetch();
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const handleUpdateGoalTitle = async (newTitle) => {
+    try {
+      await updateGoalTitle({
+        variables: { goalId: goalId, updatedGoal: newTitle },
+      });
+      setIsEditing(false); // After updating, disable edit mode
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  const [updateGoalTitle] = useMutation(UPDATE_GOAL);
+  const [isEditing, setIsEditing] = useState(false);
 
   const [removeGoal, { error }] = useMutation(REMOVE_GOAL);
 
@@ -66,6 +99,14 @@ export default function ActivityLog() {
               <br />
               <NewActivityModal />
             </div>
+            <button onClick={() => setIsEditing(true)}>Update this Goal</button>
+            {/* Render GoalForm only when isEditing is true */}
+            {isEditing && (
+              <UpdateGoalTitle
+                initialGoalTitle={goal.goalTitle}
+                onSubmit={handleUpdateGoalTitle}
+              />
+            )}
           </ActivityCard>
           <List>
             {goal.activities.map((activity) => (
