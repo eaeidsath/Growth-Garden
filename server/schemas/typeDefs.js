@@ -6,7 +6,7 @@ const typeDefs = `
         password: String
         goals: [Goal]!
         posts: [Post]!
-        friends: [User]
+        friends: [User]!
     }
 
     type Goal {
@@ -67,7 +67,7 @@ const typeDefs = `
         addActivity(goalId: ID!, activityText: String!): Goal
         addPost(postText: String!): Post
         addComment(postId: ID!, commentText: String!): Post
-        addFriend(friendID: ID!): User
+        addFriend(friendId: ID!): User
         removeGoal(goalId: ID!): Goal
         removeActivity(goalId: ID!, activityId: ID!): Goal
         removePost(postId: ID!): Post

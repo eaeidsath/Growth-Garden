@@ -123,10 +123,11 @@ export const ADD_COMMENT = gql`
 // add a friend
 // note: only included _id, username and email
 export const ADD_FRIEND = gql`
-  mutation addFriend($userId: ID!, $friendID: ID!) {
-    addFriend(userId: $userId, friendId: $friendId) {
-      _id
-      username
+    mutation addFriend($friendId: ID!) {
+        addFriend(friendId: $friendId) {
+            _id
+            username
+        }
     }
   }
 `;
