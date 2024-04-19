@@ -1,5 +1,5 @@
-const { User, Goal, Post } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
+const { User, Goal, Post } = require("../models");
+const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
     Query: {
@@ -206,7 +206,30 @@ const resolvers = {
             }
             throw AuthenticationError;
         }
-    },
+    updateGoal: async (parent, { goalId, updatedGoal }, context) => {
+    //   if (context.user) {
+    //     // Ensure that the user owns the goal
+    //     const goal = await Goal.findOne({
+    //       _id: goalId,
+    //       username: context.user.username,
+    //     });
+
+    //     if (!goal) {
+    //       throw AuthenticationError;
+    //     }
+
+        // Update the goal with the new data
+        const updated = await Goal.findOneAndUpdate(
+          { _id: goalId },
+          { goalTitle: updatedGoal },
+          { new: true }
+        );
+
+        return updated;
+      }
+    //   throw AuthenticationError;
+    // },
+  },
 };
 
 module.exports = resolvers;

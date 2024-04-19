@@ -51,6 +51,7 @@ body {
 
   button {
     padding: 10px 20px;
+    margin: 5px;
     border: none;
     border-radius: 5px;
     background-color: var(--dark-moss-green);
