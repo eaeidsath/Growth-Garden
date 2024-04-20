@@ -1,10 +1,20 @@
 import Header from "./components/Header/Header";
-import GlobalStyle from './assets/Global.style';
-import "./index.css";
+import Footer from "./components/Footer/Footer";
+import GlobalStyle from "./assets/Global.style";
+import styled from "styled-components";
 import { Outlet, useLocation } from "react-router-dom";
 
-import { ApolloClient, ApolloProvider, createHttpLink, InMemoryCache } from "@apollo/client";
+import {
+  ApolloClient,
+  ApolloProvider,
+  createHttpLink,
+  InMemoryCache,
+} from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
+
+const Main = styled.main`
+  flex: 1;
+`;
 
 const httpLink = createHttpLink({
   uri: "/graphql",
@@ -37,8 +47,10 @@ export default function App() {
       <ApolloProvider client={client}>
         <GlobalStyle />
         <Header />
-
-        <Outlet />
+        <Main>
+          <Outlet />
+        </Main>
+        <Footer />
       </ApolloProvider>
     </>
   );

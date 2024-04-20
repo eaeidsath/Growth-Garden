@@ -7,10 +7,23 @@ export const Nav = styled.nav`
   font-family: var(--quicksand);
 `;
 
+export const NavWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+
+export const Welcome = styled.span`
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding-left: 25rem;
+  font-size: 2.5rem;
+`;
+
 export const NavButton = styled.button`
   width: 100%;
   padding: 10px;
-  background-color: var(--dark-green);
+  background-color: var(--green);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -38,7 +51,7 @@ padding: 1rem;
 
 &.active {
     font-weight: bold;
-    color: #0b5021;
+    color: var(--green);
 }
 &:hover {
     text-decoration: underline;
