@@ -1,48 +1,38 @@
-import Friend from "../../components/Friend/Friend";
+import { useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
-import { LargeContainer, Title } from './Explore.styles';
+import Users from "../../components/Users/Users";
+
+import { LargeContainer, Title, Alert } from './Explore.styles';
+
+import { ALL_USERS } from '../../utils/queries';
+import Auth from '../../utils/auth';
 
 export default function Explore() {
-  //this is representing the 'friends' array for a user
-  const friends = [
-    {
-      id: 1,
-      username: "Benita",
-      profilePic: "/avatars/avatar.png",
-      goals: ["Mindfulness", "Finance", "Fitness"]
-    },
-    {
-      id: 2,
-      username: "Keri",
-      profilePic: "/avatars/Black_White-01.svg",
-      goals: ["Skill-building", "Education", "Goodwill"]
-    },
-    {
-      id: 3,
-      username: "Sarah",
-      profilePic: "/avatars/Black_White-02.svg",
-      goals: ["Career", "Travel"]
-    },
-    {
-        id: 4,
-        username: "Sarun",
-        profilePic: "/avatars/Black_White-03.svg",
-        goals: ["Productivity", "Career", "Mindfulness"]
-    }
-  ];
+
+  const { loading, data } = useQuery(ALL_USERS);
+  const users = data?.users || [];
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!Auth.loggedIn()) {
+    return (
+      <Alert>
+        <p>You need to be logged in to view your garden.</p>
+        <p>Use the links above to <Link to="/">login</Link> or <Link to="/signup">signup.</Link>.</p>
+      </Alert>
+    );
+  }
 
   return (
     <>
     <Title>Explore the Garden</Title>
     <LargeContainer>
-        {friends.map((friend) => (
-          <Friend
-            key={friend.id}
-            id={friend.id}
-            username={friend.username}
-            profilePic={friend.profilePic}
-          />
-        ))}
+        <Users
+        users={users}
+        />
     </LargeContainer>
     </>
   );
