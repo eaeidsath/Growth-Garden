@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Nav, NavButton, NavLinks, NavLink } from "./Navbar.styles";
+import { Nav, NavButton, NavLinks, NavLink, NavWrapper, Welcome } from "./Navbar.styles";
 
 import Auth from "../../utils/auth";
 
@@ -18,6 +18,8 @@ function Navbar() {
 
   return (
     <Nav>
+      <NavWrapper>
+        <Welcome>Hello there</Welcome>
       <NavLinks>
         <li>
           <NavLink
@@ -63,6 +65,7 @@ function Navbar() {
           )}
         </div>
       </NavLinks>
+      </NavWrapper>
     </Nav>
   );
 }
