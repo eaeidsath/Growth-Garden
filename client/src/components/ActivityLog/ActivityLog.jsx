@@ -98,8 +98,6 @@ export default function ActivityLog() {
               <button onClick={() => setIsEditing(true)}>
                 Update this Goal
               </button><br />
-              <button onClick={handleRemoveGoal}>Delete this Goal</button>
-              <br />
               <NewActivityModal />
             </div>
 
