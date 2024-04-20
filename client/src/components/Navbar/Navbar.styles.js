@@ -1,10 +1,11 @@
-import { styled } from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   background-color: var(--cambridge-blue);
   padding: 1rem;
   font-family: var(--quicksand);
+  height: 3rem;
 `;
 
 export const NavWrapper = styled.div`
@@ -20,6 +21,14 @@ export const Welcome = styled.span`
   font-size: 2.5rem;
 `;
 
+export const HamburgerIcon = styled.div`
+  display: none; /* Hide by default on larger screens */
+  cursor: pointer;
+  @media (max-width: 768px) {
+    display: block; /* Show on smaller screens */
+  }
+`;
+
 export const NavButton = styled.button`
   width: 100%;
   padding: 10px;
@@ -31,15 +40,35 @@ export const NavButton = styled.button`
   transition: background-color 0.3s ease;
 `;
 
-export const NavLinks = styled.ul`
-  list-style: none;
-  padding: 0px;
+export const Menu = styled.ul.attrs((props) => ({
+  isOpen: props.isOpen ? 1 : undefined, // Filter out the isOpen prop
+}))`
+  list-style-type: none;
+  padding: 0;
   margin: 0;
   margin-bottom: 1px;
   display: flex;
   align-items: center;
   gap: 40px;
   justify-content: flex-end;
+  ${({ isOpen }) =>
+    !isOpen &&
+    `
+      display: none; /* Hide when isOpen is false */
+    `}
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--cambridge-blue);
+  }
+`;
+
+export const MenuItem = styled.li`
+  padding: 10px;
+  cursor: pointer;
 `;
 
 export const NavLink = styled(Link)`
@@ -56,4 +85,14 @@ padding: 1rem;
 &:hover {
     text-decoration: underline;
 }
+`;
+
+export const CloseButton = styled.button`
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 10px;
 `;
