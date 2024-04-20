@@ -1,4 +1,4 @@
-import { MessageItem } from "./PostList.styles"
+import { MessageItem, MessageGrid } from "./PostList.styles"
 
 const PostList = ({
     friends
@@ -10,17 +10,17 @@ const PostList = ({
     console.log(friends);
 
     return (
-        <MessageItem>
+        <MessageGrid>
             {friends.map((friend) => (
                 friend.posts.map((post) => (
-                <div key={post._id}>
-                    <p>{post.username}</p>
-                    <p>Posted at {post.createdAt}</p>
-                    <p>{post.postText}</p>
-                </div>
+                    <MessageItem key={post._id}>
+                        <p>{post.username}</p>
+                        <p>Posted at {post.createdAt}</p>
+                        <p>{post.postText}</p>
+                    </MessageItem>
                 ))
             ))}
-        </MessageItem>
+        </MessageGrid>
     )
 };
 

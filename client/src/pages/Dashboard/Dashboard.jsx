@@ -2,7 +2,6 @@ import {
   BoardContainer,
   BoardSidebar,
   MessageBoard,
-  MessageGrid,
 } from "./Dashboard.styles";
 import PostForm from "../../components/PostForm/PostForm";
 import PostList from "../../components/PostList/PostList";
@@ -30,11 +29,9 @@ const Dashboard = () => {
       </BoardSidebar>
       <MessageBoard>
         <h2>Message Board</h2>
-        <MessageGrid>
           <PostList
             friends={friends}
           />
-        </MessageGrid>
       </MessageBoard>
     </BoardContainer>
   );
