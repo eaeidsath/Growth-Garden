@@ -4,9 +4,9 @@ export const TopBanner = styled.header`
 display: flex;
 justify-content: center;
 align-items: center;
-background-image: url('poppies.jpg');
+background-image: url('Sky_banner.png');
 width: 100%;
-height: 200px;
+height: 300px;
 background-size: cover;
 background-position: center;
 `;

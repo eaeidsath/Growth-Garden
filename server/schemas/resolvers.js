@@ -205,18 +205,19 @@ const resolvers = {
                 )
             }
             throw AuthenticationError;
+
         },
     updateGoal: async (parent, { goalId, updatedGoal }, context) => {
-       if (context.user) {
-    //     // Ensure that the user owns the goal
-         const goal = await Goal.findOne({
-           _id: goalId,
-           username: context.user.username,
-         });
+      if (context.user) {
+        // Ensure that the user owns the goal
+        const goal = await Goal.findOne({
+          _id: goalId,
+          username: context.user.username,
+        });
 
-         if (!goal) {
-           throw AuthenticationError;
-         }
+        if (!goal) {
+          throw AuthenticationError;
+        }
 
         // Update the goal with the new data
         const updated = await Goal.findOneAndUpdate(
@@ -227,8 +228,8 @@ const resolvers = {
 
         return updated;
       }
-       throw AuthenticationError;
-     },
+      throw AuthenticationError;
+    },
   },
 };
 

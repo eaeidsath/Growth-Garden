@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --columbia-blue: #c9d8eeff;
     --beaver: #ae9682ff;
     --dim-gray: #667069ff;
+    --green: #0b5021;
   
     /* Font families */
     --annie-use-your-telescope: "Annie Use Your Telescope", cursive;
@@ -26,10 +27,20 @@ const GlobalStyle = createGlobalStyle`
 body {
     margin: 0;
     padding: 0;
-    background-image: url("/grass.jpg");
+    background-image: url("/grass.png");
     background-size: cover;
     background-position: center;
     font-family: var(--quicksand);
+  }
+
+  a {
+    color: var(--cambridge-blue);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--columbia-blue);
+    text-decoration: none;
   }
 
   h1 {

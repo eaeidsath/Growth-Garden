@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <>
       <TopBanner>
-        <Title>Growth Garden</Title>
+        {/* <Title>Growth Garden</Title> */}
       </TopBanner>
       <Navbar />
     </>
