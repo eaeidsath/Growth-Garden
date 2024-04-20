@@ -6,8 +6,9 @@ export default function Header() {
     <>
       <TopBanner>
         {/* <Title>Growth Garden</Title> */}
-        <Navbar />
+        
       </TopBanner>
+      <Navbar />
     </>
   );
 }
