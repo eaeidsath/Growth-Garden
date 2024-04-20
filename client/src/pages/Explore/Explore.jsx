@@ -19,11 +19,9 @@ export default function Explore() {
     <>
     <Title>Explore the Garden</Title>
     <LargeContainer>
-        {users.map((user) => (
-          <Friend
-            users={users}
-          />
-        ))}
+        <Users
+        users={users}
+        />
     </LargeContainer>
     </>
   );
