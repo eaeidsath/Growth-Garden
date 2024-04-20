@@ -4,6 +4,10 @@ export const BoardContainer = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const BoardSidebar = styled.div`
@@ -17,6 +21,11 @@ export const BoardSidebar = styled.div`
   color: white;
   font-size: 1.2rem;
   line-height: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `;
 
 export const MessageBoard = styled.div`
@@ -31,6 +40,11 @@ export const MessageBoard = styled.div`
     color: white;
     font-size: 1rem;
     font-family: var(--quicksand)
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 10px;
   }
 `;
 
