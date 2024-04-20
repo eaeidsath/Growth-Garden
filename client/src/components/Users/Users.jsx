@@ -1,4 +1,5 @@
 import { useMutation } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 import { CardContainer, ProfilePic, UserInfo, Username, DateJoined, Button } from './Users.styles';
 
@@ -24,22 +25,23 @@ const ContactCard = ({
     } catch (err) {
       console.error(err);
     }
+
+    event.target.innerHTML = "Friend Added!"
   }
 
   return (
     <div>
-    {users.map((user) => (
+      {users.map((user) => (
         <CardContainer key={user._id}>
           <ProfilePic src='/avatars/avatar.png' alt="Profile Picture" />
           <UserInfo>
             <Username>{user.username}</Username>
-            <DateJoined></DateJoined>
           </UserInfo>
           <Button>View Profile</Button>
           <Button value={user._id} onClick={addFriendButton} >Add Friend</Button>
         </CardContainer>
       ))
-    }
+      }
     </div>
   );
 };
