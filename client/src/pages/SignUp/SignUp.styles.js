@@ -50,7 +50,7 @@ export const SignUpForm = styled.form`
   width: calc(100% - 40px);
 `;
 
-export const TextInput = styled.textarea`
+export const TextInput = styled.input`
   width: 80%;
   max-width: 100%;
   padding: 10px;

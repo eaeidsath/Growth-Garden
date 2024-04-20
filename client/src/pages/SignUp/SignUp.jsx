@@ -55,6 +55,7 @@ function SignUp() {
             <SignUpForm onSubmit={handleSignUpSubmit}>
               <h3>Sign Up</h3>
               <TextInput
+                type="username"
                 name="username"
                 placeholder="Username"
                 value={signUpFormData.username}
@@ -62,7 +63,9 @@ function SignUp() {
                 required
               />
               <br />
+              <br />
               <TextInput
+                type="email"
                 name="email"
                 placeholder="Email"
                 value={signUpFormData.email}
@@ -70,7 +73,9 @@ function SignUp() {
                 required
               />
               <br />
+              <br />
               <TextInput
+                type="password"
                 name="password"
                 placeholder="Password"
                 value={signUpFormData.password}

@@ -11,7 +11,7 @@ import {
   Message,
   LoginForm,
   TextInput,
-  SubmitButton
+  SubmitButton,
 } from "./LogIn.styles";
 
 function LogIn() {
@@ -53,21 +53,23 @@ function LogIn() {
             <LoginForm onSubmit={handleSignInSubmit}>
               <h2>Sign In</h2>
               <TextInput
+                type="email"
                 name="email"
                 placeholder="Email"
                 value={signInFormData.email}
                 onChange={handleSignInChange}
                 required
               />
-              <br />
+              <br /><br />
               <TextInput
+                type="password"
                 name="password"
                 placeholder="Password"
                 value={signInFormData.password}
                 onChange={handleSignInChange}
                 required
               />
-              <br />
+              <br /><br />
               <SubmitButton type="submit">Sign In</SubmitButton>
             </LoginForm>
           </LoginContainer>
