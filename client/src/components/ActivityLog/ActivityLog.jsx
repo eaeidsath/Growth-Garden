@@ -95,8 +95,6 @@ export default function ActivityLog() {
           <ActivityCard>
             <Subtitle>Activity Log</Subtitle>
             <div>
-              <button onClick={handleRemoveGoal}>Delete this goal</button>
-              <br />
               <NewActivityModal />
             </div>
             <button onClick={() => setIsEditing(true)}>Update this Goal</button>
@@ -110,9 +108,10 @@ export default function ActivityLog() {
           </ActivityCard>
           <List>
             {goal.activities.map((activity) => (
-              <ListItem key={activity._id}>{activity.activityText}</ListItem>
+              <ListItem key={activity._id}> - {activity.activityText}</ListItem>
             ))}
           </List>
+            <button style={{ backgroundColor: '#D32F2F' }} onClick={handleRemoveGoal}>Delete this goal</button>    
         </RightSide>
       </CardContainer>
     </Wrapper>

@@ -129,7 +129,6 @@ export const ADD_FRIEND = gql`
             username
         }
     }
-  }
 `;
 
 //remove a goal

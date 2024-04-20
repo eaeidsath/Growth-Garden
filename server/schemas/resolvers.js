@@ -205,7 +205,7 @@ const resolvers = {
                 )
             }
             throw AuthenticationError;
-        }
+        },
     updateGoal: async (parent, { goalId, updatedGoal }, context) => {
     //   if (context.user) {
     //     // Ensure that the user owns the goal
