@@ -1,7 +1,7 @@
 import { useMutation } from '@apollo/client';
 import { Link } from 'react-router-dom';
 
-import { CardContainer, ProfilePic, UserInfo, Username, DateJoined, Button } from './Users.styles';
+import { CardContainer, ProfilePic, UserInfo, Username, Button, LargeContainer } from './Users.styles';
 
 import { ADD_FRIEND } from '../../utils/mutations';
 
@@ -31,17 +31,19 @@ const ContactCard = ({
 
   return (
     <div>
-      {users.map((user) => (
-        <CardContainer key={user._id}>
-          <ProfilePic src='/avatars/avatar.png' alt="Profile Picture" />
-          <UserInfo>
-            <Username>{user.username}</Username>
-          </UserInfo>
-          <Button>View Profile</Button>
-          <Button value={user._id} onClick={addFriendButton} >Add Friend</Button>
-        </CardContainer>
-      ))
-      }
+      <LargeContainer>
+        {users.map((user) => (
+          <CardContainer key={user._id}>
+            <ProfilePic src='/avatars/avatar.png' alt="Profile Picture" />
+            <UserInfo>
+              <Username>{user.username}</Username>
+            </UserInfo>
+            <Button>View Profile</Button>
+            <Button value={user._id} onClick={addFriendButton} >Add Friend</Button>
+          </CardContainer>
+        ))
+        }
+      </LargeContainer>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Users from "../../components/Users/Users";
 
-import { LargeContainer, Title, Alert } from './Explore.styles';
+import { Title, Alert } from './Explore.styles';
 
 import { ALL_USERS } from '../../utils/queries';
 import Auth from '../../utils/auth';
@@ -29,11 +29,9 @@ export default function Explore() {
   return (
     <>
     <Title>Explore the Garden</Title>
-    <LargeContainer>
-        <Users
+      <Users
         users={users}
-        />
-    </LargeContainer>
+      />
     </>
   );
 }
