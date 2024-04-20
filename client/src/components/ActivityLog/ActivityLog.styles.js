@@ -2,9 +2,10 @@ import { styled } from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  height: 70vh;
+  min-height: 100vh;
+  padding-top: 70px
 `;
 
 export const CardContainer = styled.div`
@@ -12,9 +13,10 @@ export const CardContainer = styled.div`
   display: flex;
   background-color: white;
 
-  /* Responsive layout */
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-direction: column; /* Stack the flex items vertically */
+    align-items: center; /* Center the items on smaller screens */
+    
   }
 `;
 
@@ -60,9 +62,12 @@ export const Subtitle = styled.h3`
 
 export const ActivityCard = styled.div`
   margin-bottom: 8px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const List = styled.ul`
@@ -72,7 +77,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   align-items: center;
-  margin-bottom: 10p;
+  margin-bottom: 10px;
   font-family: var(--quicksand);
   font-size: 1.5rem;
   line-height: 2;
