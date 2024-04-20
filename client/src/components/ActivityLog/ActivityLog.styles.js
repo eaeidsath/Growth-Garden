@@ -26,6 +26,7 @@ export const LeftSide = styled.div`
   background-image: url("/wood.jpg");
   background-size: cover;
   background-position: center;
+  color: white;
 `;
 
 export const RightSide = styled.div`
