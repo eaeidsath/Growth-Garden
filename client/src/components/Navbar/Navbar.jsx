@@ -12,7 +12,7 @@ import {
 import Auth from "../../utils/auth";
 
 function Navbar() {
-
+  const [currentSection, setCurrentSection] = useState("dashboard"); 
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
