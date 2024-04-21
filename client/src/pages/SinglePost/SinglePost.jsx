@@ -6,6 +6,8 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 
 import { GET_SINGLE_POST } from '../../utils/queries';
 
+import { MessageBoard } from './SinglePost.styles';
+
 const SinglePost = () => {
     const { postId } = useParams();
 
@@ -19,7 +21,7 @@ const SinglePost = () => {
         return <div>Loading...</div>
     }
     return (
-        <div>
+        <MessageBoard>
             <div>
                 <p>{post.username}</p>
                 <p>Posted at {post.createdAt}</p>
@@ -32,7 +34,7 @@ const SinglePost = () => {
             <div>
                 <CommentForm postId={post._id} />
             </div>
-        </div>
+        </MessageBoard>
     );
 };
 
