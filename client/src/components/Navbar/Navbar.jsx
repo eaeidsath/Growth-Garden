@@ -12,13 +12,13 @@ import {
 import Auth from "../../utils/auth";
 
 function Navbar() {
-  const [currentSection, setCurrentSection] = useState("dashboard"); 
+/*   const [currentSection, setCurrentSection] = useState("dashboard");  */
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
-  const handleNavigationClick = (section) => {
+/*   const handleNavigationClick = (section) => {
     setCurrentSection(section);
-  };
+  }; */
 
   //create logout function
   const logout = (event) => {
@@ -34,7 +34,6 @@ function Navbar() {
             <NavLink
               to="/dashboard"
               className={currentPage === "/dashboard" ? "active" : ""}
-              onClick={() => handleNavigationClick("dashboard")}
             >
               Dashboard
             </NavLink>
@@ -43,7 +42,6 @@ function Navbar() {
             <NavLink
               to="/mygarden"
               className={currentPage === "/mygarden" ? "active" : ""}
-              onClick={() => handleNavigationClick("mygarden")}
             >
               My Garden
             </NavLink>
@@ -52,7 +50,6 @@ function Navbar() {
             <NavLink
               to="/explore"
               className={currentPage === "/explore" ? "active" : ""}
-              onClick={() => handleNavigationClick("explore")}
             >
               Explore
             </NavLink>
