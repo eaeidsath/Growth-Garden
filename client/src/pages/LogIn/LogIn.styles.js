@@ -44,7 +44,7 @@ export const LoginContainer = styled.div`
   }
   @media (max-width: 800px) {
     width: 30rem;
-  }
+  };
 `;
 
 // Message on the right asking the user to sign up

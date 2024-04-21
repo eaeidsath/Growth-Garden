@@ -12,6 +12,7 @@ import {
 import Auth from "../../utils/auth";
 
 function Navbar() {
+
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
@@ -26,7 +27,7 @@ function Navbar() {
   };
 
   return (
-    <Nav>
+    <Nav>      
       <NavWrapper>
         <Menu>
           <MenuItem>
@@ -56,18 +57,18 @@ function Navbar() {
               Explore
             </NavLink>
           </MenuItem>
-          {Auth.loggedIn() ? (
-            <MenuItem>
-              <NavButton onClick={logout}> Log Out </NavButton>
-            </MenuItem>
-          ) : (
-            <MenuItem>
-              <NavButton>
-                {" "}
-                <Link to="/">Log In</Link>{" "}
-              </NavButton>
-            </MenuItem>
-          )}
+            {Auth.loggedIn() ? (
+              <MenuItem>
+                <NavButton onClick={logout}> Log Out </NavButton>
+              </MenuItem>
+            ) : (
+                <MenuItem>
+                  <NavButton>
+                    {" "}
+                    <Link to="/">Log In</Link>{" "}
+                  </NavButton>
+                </MenuItem>
+            )}
         </Menu>
       </NavWrapper>
     </Nav>
