@@ -12,13 +12,13 @@ import {
 import Auth from "../../utils/auth";
 
 function Navbar() {
-/*   const [currentSection, setCurrentSection] = useState("dashboard");  */
+  const [currentSection, setCurrentSection] = useState("dashboard"); 
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
-/*   const handleNavigationClick = (section) => {
+  const handleNavigationClick = (section) => {
     setCurrentSection(section);
-  }; */
+  };
 
   //create logout function
   const logout = (event) => {
@@ -32,24 +32,27 @@ function Navbar() {
         <Menu>
           <MenuItem>
             <NavLink
-              to="/dashboard"
+              to={"/dashboard"}
               className={currentPage === "/dashboard" ? "active" : ""}
+              onClick={() => handleNavigationClick("dashboard")}
             >
               Dashboard
             </NavLink>
           </MenuItem>
           <MenuItem>
             <NavLink
-              to="/mygarden"
+              to={"/mygarden"}
               className={currentPage === "/mygarden" ? "active" : ""}
+              onClick={() => handleNavigationClick("mygarden")}
             >
               My Garden
             </NavLink>
           </MenuItem>
           <MenuItem>
             <NavLink
-              to="/explore"
+              to={"/explore"}
               className={currentPage === "/explore" ? "active" : ""}
+              onClick={() => handleNavigationClick("explore")}
             >
               Explore
             </NavLink>
