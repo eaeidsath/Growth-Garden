@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { NoteText, Category, SubmitButton } from './PostForm.styles';
+import { NoteText, SubmitButton } from './PostForm.styles';
 import { useMutation } from "@apollo/client";
 
 import { ADD_POST } from '../../utils/mutations';
@@ -52,8 +52,6 @@ export default function PostForm() {
               rows={6}
               cols={50}
             />
-
-            <br />
 
             <br />
             <SubmitButton type="submit">Post</SubmitButton>

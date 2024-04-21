@@ -14,23 +14,23 @@ export const BoxWrapper = styled.div`
   display: flex;
   flex: 1;
   gap: 5rem;
-  margin: 15rem;
+  margin: 10rem;
 
   @media (max-width: 1200px) {
     flex-direction: column; /* Stack the flex items vertically */
     align-items: center; /* Center the items on smaller screens */
-    margin-top: 30rem;
+    margin-top: 25rem;
     gap: 1rem;
   }
 
   @media (max-width: 1000px) {
-    margin-top: 35rem;
+    margin-top: 28rem;
   }
 
   @media (max-width: 800px) {
-    margin-top: 37rem;
+    margin-top: 30rem;
     gap: 1rem;
-  };
+  }
 `;
 
 // Container for login form
@@ -44,7 +44,7 @@ export const LoginContainer = styled.div`
   }
   @media (max-width: 800px) {
     width: 30rem;
-  };
+  }
 `;
 
 // Message on the right asking the user to sign up
@@ -58,7 +58,7 @@ export const Message = styled.div`
   color: white;
   text-align: center;
   border-radius: 8px;
-  height: calc(100% - 40px);
+  height: 100%;
 `;
 
 // Login form styling
@@ -68,9 +68,7 @@ export const LoginForm = styled.form`
   background-position: center;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   color: white;
-  width: calc(100% - 40px);
 `;
 
 export const TextInput = styled.input`

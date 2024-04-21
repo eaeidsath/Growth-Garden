@@ -37,8 +37,8 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     background-position: center;
     font-family: var(--quicksand);
-    height: 100vh;
     text-rendering: optimizeLegibility;
+    margin-bottom: 10vh;
   }
 
   a {

@@ -7,13 +7,11 @@ import {
   Menu,
   NavLink,
   NavWrapper,
-  Welcome,
 } from "./Navbar.styles";
 
 import Auth from "../../utils/auth";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
@@ -28,9 +26,8 @@ function Navbar() {
   };
 
   return (
-    <Nav>      
+    <Nav>
       <NavWrapper>
-        <Welcome>Hello There</Welcome>
         <Menu>
           <MenuItem>
             <NavLink
@@ -59,18 +56,18 @@ function Navbar() {
               Explore
             </NavLink>
           </MenuItem>
-            {Auth.loggedIn() ? (
-              <MenuItem>
-                <NavButton onClick={logout}> Log Out </NavButton>
-              </MenuItem>
-            ) : (
-                <MenuItem>
-                  <NavButton>
-                    {" "}
-                    <Link to="/">Log In</Link>{" "}
-                  </NavButton>
-                </MenuItem>
-            )}
+          {Auth.loggedIn() ? (
+            <MenuItem>
+              <NavButton onClick={logout}> Log Out </NavButton>
+            </MenuItem>
+          ) : (
+            <MenuItem>
+              <NavButton>
+                {" "}
+                <Link to="/">Log In</Link>{" "}
+              </NavButton>
+            </MenuItem>
+          )}
         </Menu>
       </NavWrapper>
     </Nav>
