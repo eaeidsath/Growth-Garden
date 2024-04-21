@@ -7,6 +7,8 @@ import { useParams, Link } from "react-router-dom";
 //in order to make sure the user is logged in before adding an activity, use Auth 
 import Auth from "../../utils/auth";
 
+import { ActivityForm } from './CreateNewActivity.styles';
+
 function NewActivityForm() {
   //define state for the activity variable 
   const [activity, setActivity] = useState("");
@@ -40,9 +42,9 @@ function NewActivityForm() {
   return (
     <>
       {Auth.loggedIn() ? (
-        <form onSubmit={handleSubmit}>
+        <ActivityForm onSubmit={handleSubmit}>
           <label>
-            New Activity:
+            New Activity: 
             <input
               type="text"
               value={activity}
@@ -52,7 +54,7 @@ function NewActivityForm() {
             <br />
           </label>
           <button type="submit">Add Activity</button>
-        </form>
+        </ActivityForm>
       ) : (
         <p>
           {" "}

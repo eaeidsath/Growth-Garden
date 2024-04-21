@@ -6,6 +6,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 50vh;
+  margin-bottom: 10rem;
 `;
 
 // Styled component for the wrapper that holds both boxes
@@ -14,6 +15,22 @@ export const BoxWrapper = styled.div`
   flex: 1;
   gap: 5rem;
   margin: 15rem;
+
+  @media (max-width: 1200px) {
+    flex-direction: column; /* Stack the flex items vertically */
+    align-items: center; /* Center the items on smaller screens */
+    margin-top: 30rem;
+    gap: 1rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 35rem;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 37rem;
+    gap: 1rem;
+  };
 `;
 
 // Container for login form
@@ -22,12 +39,18 @@ export const LoginContainer = styled.div`
   padding: 20px;
   background-color: var(--cambridge-blue);
   border-radius: 8px;
+  @media (max-width: 1200px) {
+    width: 50rem;
+  }
+  @media (max-width: 800px) {
+    width: 30rem;
+  };
 `;
 
 // Message on the right asking the user to sign up
 export const Message = styled.div`
   flex: 1;
-  background-image: url("../src/assets/chalkboard.jpeg");
+  background-image: url("/chalkboard.jpeg");
   background-size: cover;
   background-position: center;
   padding: 20px;
@@ -40,7 +63,7 @@ export const Message = styled.div`
 
 // Login form styling
 export const LoginForm = styled.form`
-  background-image: url("../src/assets/chalkboard.jpeg");
+  background-image: url("/chalkboard.jpeg");
   background-size: cover;
   background-position: center;
   padding: 20px;

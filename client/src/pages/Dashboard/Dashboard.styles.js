@@ -14,7 +14,7 @@ export const BoardSidebar = styled.div`
   padding-top: 0.5rem;
   text-align: center;
   width: 20%;
-  background-image: url("../src/assets/chalkboard.jpeg");
+  background-image: url("/chalkboard.jpeg");
   background-size: cover;
   background-position: center;
   font-family: var(--homemade-apple);
@@ -30,7 +30,7 @@ export const BoardSidebar = styled.div`
 
 export const MessageBoard = styled.div`
   width: calc(80% - 20px); /* Set width to 80% of the container minus margin */
-  background-image: url("../src/assets/chalkboard.jpeg");
+  background-image: url("/chalkboard.jpeg");
   background-size: cover;
   background-position: center;
   font-family: var(--annie-use-your-telescope);

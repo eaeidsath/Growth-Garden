@@ -1,14 +1,12 @@
 import Navbar from "../Navbar/Navbar";
-import { TopBanner, Title } from "./Header.styles";
+import { TopBanner } from "./Header.styles";
 
 export default function Header() {
   return (
-    <>
+    <header>
       <TopBanner>
-        {/* <Title>Growth Garden</Title> */}
-        
       </TopBanner>
       <Navbar />
-    </>
+    </header>
   );
 }

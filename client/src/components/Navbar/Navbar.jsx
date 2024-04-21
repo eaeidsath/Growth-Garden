@@ -1,14 +1,19 @@
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Nav, NavButton, NavLinks, NavLink, NavWrapper, Welcome } from "./Navbar.styles";
+import {
+  Nav,
+  NavButton,
+  MenuItem,
+  Menu,
+  NavLink,
+  NavWrapper,
+  Welcome,
+} from "./Navbar.styles";
 
 import Auth from "../../utils/auth";
 
 function Navbar() {
-  //create logout function
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
+  const [isOpen, setIsOpen] = useState(false);
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
@@ -16,55 +21,57 @@ function Navbar() {
     setCurrentSection(section);
   };
 
+  //create logout function
+  const logout = (event) => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
   return (
-    <Nav>
+    <Nav>      
       <NavWrapper>
-        <Welcome>Hello there</Welcome>
-      <NavLinks>
-        <li>
-          <NavLink
-            to="/dashboard"
-            className={currentPage === "/dashboard" ? "active" : ""}
-            onClick={() => handleNavigationClick("dashboard")}
-          >
-            Dashboard
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/mygarden"
-            className={currentPage === "/mygarden" ? "active" : ""}
-            onClick={() => handleNavigationClick("mygarden")}
-          >
-            My Garden
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/explore"
-            className={currentPage === "/explore" ? "active" : ""}
-            onClick={() => handleNavigationClick("explore")}
-          >
-            Explore
-          </NavLink>
-        </li>
-        <div>
-          {Auth.loggedIn() ? (
-            <li>
-              <NavButton onClick={logout}> Log Out </NavButton>
-            </li>
-          ) : (
-            <>
-              <li>
-                <NavButton>
-                  {" "}
-                  <Link to="/">Log In</Link>{" "}
-                </NavButton>
-              </li>
-            </>
-          )}
-        </div>
-      </NavLinks>
+        <Welcome>Hello There</Welcome>
+        <Menu>
+          <MenuItem>
+            <NavLink
+              to="/dashboard"
+              className={currentPage === "/dashboard" ? "active" : ""}
+              onClick={() => handleNavigationClick("dashboard")}
+            >
+              Dashboard
+            </NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink
+              to="/mygarden"
+              className={currentPage === "/mygarden" ? "active" : ""}
+              onClick={() => handleNavigationClick("mygarden")}
+            >
+              My Garden
+            </NavLink>
+          </MenuItem>
+          <MenuItem>
+            <NavLink
+              to="/explore"
+              className={currentPage === "/explore" ? "active" : ""}
+              onClick={() => handleNavigationClick("explore")}
+            >
+              Explore
+            </NavLink>
+          </MenuItem>
+            {Auth.loggedIn() ? (
+              <MenuItem>
+                <NavButton onClick={logout}> Log Out </NavButton>
+              </MenuItem>
+            ) : (
+                <MenuItem>
+                  <NavButton>
+                    {" "}
+                    <Link to="/">Log In</Link>{" "}
+                  </NavButton>
+                </MenuItem>
+            )}
+        </Menu>
       </NavWrapper>
     </Nav>
   );

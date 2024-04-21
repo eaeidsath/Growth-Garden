@@ -16,7 +16,6 @@ export const CardContainer = styled.div`
   @media (max-width: 768px) {
     flex-direction: column; /* Stack the flex items vertically */
     align-items: center; /* Center the items on smaller screens */
-    
   }
 `;
 
