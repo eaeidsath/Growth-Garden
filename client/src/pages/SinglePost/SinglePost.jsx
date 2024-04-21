@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 
 import CommentList from '../../components/CommentList/CommentList';
@@ -6,7 +6,7 @@ import CommentForm from '../../components/CommentForm/CommentForm';
 
 import { GET_SINGLE_POST } from '../../utils/queries';
 
-import { MessageBoard } from './SinglePost.styles';
+import { BoardContainer, MessageBoard, Post } from './SinglePost.styles';
 
 const SinglePost = () => {
     const { postId } = useParams();
@@ -21,20 +21,23 @@ const SinglePost = () => {
         return <div>Loading...</div>
     }
     return (
-        <MessageBoard>
-            <div>
-                <p>{post.username}</p>
-                <p>Posted at {post.createdAt}</p>
-                <p>{post.postText}</p>
-            </div>
+        <BoardContainer>
+            <MessageBoard>
+                <Post>
+                    
+                    <p>{post.username} posted at {post.createdAt}</p>
+                    <p>{post.postText}</p>
+                </Post>
 
-            <div>
-                <CommentList comments={post.comments} />
-            </div>
-            <div>
-                <CommentForm postId={post._id} />
-            </div>
-        </MessageBoard>
+                <div>
+                    <CommentList comments={post.comments} />
+                </div>
+                <div>
+                    <CommentForm postId={post._id} />
+                    <button><Link to={'/dashboard'}>Back to Dashboard</Link></button>
+                </div>
+            </MessageBoard>
+        </BoardContainer>
     );
 };
 

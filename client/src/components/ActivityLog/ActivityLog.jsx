@@ -99,7 +99,7 @@ export default function ActivityLog() {
             <Subtitle>Activity Log</Subtitle>
             <div>
               <button onClick={() => setIsEditing(true)}>
-              <FontAwesomeIcon icon={faSync} /> Update
+              <FontAwesomeIcon icon={faSync} /> Update Goal
               </button><br />
              <NewActivityModal />
             </div>
@@ -117,7 +117,7 @@ export default function ActivityLog() {
               <ListItem key={activity._id}> - {activity.activityText}</ListItem>
             ))}
           </List>
-            <button style={{ backgroundColor: '#D32F2F' }} onClick={handleRemoveGoal}><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon> Delete</button>    
+            <button style={{ backgroundColor: '#D32F2F' }} onClick={handleRemoveGoal}><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon> Delete This Goal</button>    
         </RightSide>
       </CardContainer>
     </Wrapper>

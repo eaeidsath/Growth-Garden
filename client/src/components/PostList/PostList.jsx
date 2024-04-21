@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageItem, MessageGrid } from "./PostList.styles"
+import { MessageItem, MessageGrid, Chalk } from "./PostList.styles"
 
 const PostList = ({
     friends
@@ -14,13 +14,15 @@ const PostList = ({
         <MessageGrid>
             {friends.map((friend) => (
                 friend.posts.map((post) => (
-                    <Link to={`/singlepost/${post._id}`}>
-                        <MessageItem key={post._id}>
-                            <p>{post.username}</p>
-                            <p>Posted at {post.createdAt}</p>
-                            <p>{post.postText}</p>
-                        </MessageItem>
-                    </Link>
+                    <Chalk key={post._id}>
+                        <Link to={`/singlepost/${post._id}`}>
+                            <MessageItem>
+                                <p>{post.username}</p>
+                                <p>Posted at {post.createdAt}</p>
+                                <p>{post.postText}</p>
+                            </MessageItem>
+                        </Link>
+                    </Chalk>
                 ))
             ))}
         </MessageGrid>

@@ -6,6 +6,8 @@ import { ADD_COMMENT } from '../../utils/mutations';
 
 import Auth from '../../utils/auth';
 
+import { CommentText, SubmitButton } from './CommentForm.styles';
+
 const CommentForm = ({ postId }) => {
     const [commentText, setCommentText] = useState('');
 
@@ -45,18 +47,18 @@ const CommentForm = ({ postId }) => {
                 <div>
                     <form onSubmit={handleSubmit}>
                         <div>
-                            <textarea
+                            <CommentText
                                 name='commentText'
                                 placeholder='Share your thoughts.'
                                 value={commentText}
                                 onChange={handleChange}
-                            ></textarea>
+                            ></CommentText>
                         </div>
 
                         <div>
-                            <button type='submit'>
+                            <SubmitButton type='submit'>
                                 Add Comment
-                            </button>
+                            </SubmitButton>
                         </div>
                     </form>
                 </div>

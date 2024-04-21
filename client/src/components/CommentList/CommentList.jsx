@@ -1,3 +1,5 @@
+import { Comment } from './CommentList.styles';
+
 const CommentList = ({
     comments
 }) => {
@@ -7,22 +9,22 @@ const CommentList = ({
 
     return (
         <div>
-            <h3>Comments</h3>
+            <h2>Comments</h2>
 
             <div>
                 {comments &&
                 comments.map((comment) => (
-                    <div key={comment._id}>
+                    <Comment key={comment._id}>
                         <p>
                             {comment.username} commented:
                         </p>
                         <p>
                             {comment.commentText}
                         </p>
-                        <p>
+                        <p style={{fontSize: '1.0rem'}}>
                             {comment.createdAt}
                         </p>
-                    </div>    
+                    </Comment>    
                 ))}
             </div>
         </div>
