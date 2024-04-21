@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 :root {
@@ -24,17 +24,25 @@ const GlobalStyle = createGlobalStyle`
     --indie-flower: "Indie Flower", cursive;
   }
 
-body {
+  html, body {
     margin: 0;
     padding: 0;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
+
+  body {
     background-image: url("/grass.png");
     background-size: cover;
     background-position: center;
     font-family: var(--quicksand);
+    height: 100vh;
+    text-rendering: optimizeLegibility;
   }
 
   a {
-    color: var(--cambridge-blue);
+    color: white;
     text-decoration: none;
   }
 

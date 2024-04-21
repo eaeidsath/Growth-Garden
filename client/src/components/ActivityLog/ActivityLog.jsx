@@ -11,6 +11,9 @@ import UpdateGoalTitle from "../../components/UpdateGoalTitle/UpdateGoalTitle";
 
 import Flower from "../Flower/Flower";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash, faSync } from '@fortawesome/free-solid-svg-icons';
+
 import {
   Wrapper,
   CardContainer,
@@ -96,9 +99,9 @@ export default function ActivityLog() {
             <Subtitle>Activity Log</Subtitle>
             <div>
               <button onClick={() => setIsEditing(true)}>
-                Update this Goal
+              <FontAwesomeIcon icon={faSync} /> Update
               </button><br />
-              <NewActivityModal />
+             <NewActivityModal />
             </div>
 
             {/* Render GoalForm only when isEditing is true */}
@@ -114,7 +117,7 @@ export default function ActivityLog() {
               <ListItem key={activity._id}> - {activity.activityText}</ListItem>
             ))}
           </List>
-            <button style={{ backgroundColor: '#D32F2F' }} onClick={handleRemoveGoal}>Delete this goal</button>    
+            <button style={{ backgroundColor: '#D32F2F' }} onClick={handleRemoveGoal}><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon> Delete</button>    
         </RightSide>
       </CardContainer>
     </Wrapper>

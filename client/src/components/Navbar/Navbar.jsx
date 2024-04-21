@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import styled, { css } from "styled-components";
 import {
   Nav,
   NavButton,
   MenuItem,
-  HamburgerIcon,
   Menu,
   NavLink,
   NavWrapper,
   Welcome,
-  CloseButton,
 } from "./Navbar.styles";
 
 import Auth from "../../utils/auth";
@@ -30,38 +27,11 @@ function Navbar() {
     Auth.logout();
   };
 
-  // Toggle menu function for hamburger icon
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Close menu function
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
-    <Nav>
+    <Nav>      
       <NavWrapper>
-        <HamburgerIcon onClick={toggleMenu}>
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"
-              fill="white"
-            />
-          </svg>
-        </HamburgerIcon>
-        <Welcome>Hello there</Welcome>
-        <Menu isOpen={isOpen}>
-          <CloseButton onClick={closeMenu}>x</CloseButton>
+        <Welcome>Hello There</Welcome>
+        <Menu>
           <MenuItem>
             <NavLink
               to="/dashboard"
@@ -89,22 +59,18 @@ function Navbar() {
               Explore
             </NavLink>
           </MenuItem>
-          <div>
             {Auth.loggedIn() ? (
               <MenuItem>
                 <NavButton onClick={logout}> Log Out </NavButton>
               </MenuItem>
             ) : (
-              <>
                 <MenuItem>
                   <NavButton>
                     {" "}
                     <Link to="/">Log In</Link>{" "}
                   </NavButton>
                 </MenuItem>
-              </>
             )}
-          </div>
         </Menu>
       </NavWrapper>
     </Nav>
