@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useMutation } from "@apollo/client";
 import jwt_decode from "jwt-decode";
 import { ADD_GOAL } from "../../utils/mutations";
+import { QUERY_ME } from "../../utils/queries";
 
 import Auth from "../../utils/auth";
 
@@ -36,7 +37,12 @@ export default function CreateNewGoal({ closeModal }) {
   };
 
   //use hook for adding a goal
-  const [addGoal, { error }] = useMutation(ADD_GOAL);
+  const [addGoal, { error }] = useMutation(ADD_GOAL, {
+    refetchQueries: [
+      QUERY_ME,
+      'me'
+    ]
+  });
 
   //use useEffect hook in order to get the user's username data from JWT
   useEffect(() => {
