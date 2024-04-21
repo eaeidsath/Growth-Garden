@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageItem, MessageGrid, Chalk } from "./PostList.styles"
+import { MessageItem, MessageGrid, Chalk } from "./PostList.styles";
 
 const PostList = ({
     friends
