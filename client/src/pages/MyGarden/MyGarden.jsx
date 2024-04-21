@@ -11,6 +11,7 @@ import Modal from "../../components/Modal/Modal";
 import {
   LargeContainer,
   GardenBox,
+  Welcome,
   GoalCard,
   GoalHeader,
   Alert,
@@ -43,7 +44,7 @@ export default function MyGarden() {
 
   return (
     <>
-      <h2>Welcome, {user.username}.</h2>
+      <Welcome>Welcome, {user.username}.</Welcome>
       <LargeContainer>
         <GardenBox>
           <FlowerGarden goals={user.goals} />

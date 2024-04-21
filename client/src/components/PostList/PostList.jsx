@@ -1,4 +1,4 @@
-import { MessageItem, MessageGrid } from "./PostList.styles"
+import { MessageItem, MessageGrid } from "./PostList.styles";
 
 const PostList = ({
     friends
