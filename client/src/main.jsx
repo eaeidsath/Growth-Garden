@@ -11,6 +11,8 @@ import ErrorPage from "./pages/ErrorPage.jsx";
 import LogIn from "./pages/LogIn/LogIn.jsx";
 import SignUp from "./pages/SignUp/SignUp.jsx";
 import SingleGoal from "./pages/SingleGoal/SingleGoal.jsx";
+import SinglePost from "./pages/SinglePost/SinglePost.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,10 +40,13 @@ const router = createBrowserRouter([
         element: <Explore />,
       },
       {
-        //TODO: change this to "/goals/:goalId" when we have client queries set up
         path: "/singlegoal/:goalId",
         element: <SingleGoal />,
       },
+      {
+        path: "/singlepost/:postId",
+        element: <SinglePost />
+      }
     ],
   },
 ]);

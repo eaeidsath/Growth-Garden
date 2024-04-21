@@ -28,10 +28,12 @@ export const BoardSidebar = styled.div`
   padding-top: 0.5rem;
   text-align: center;
   width: 20%;
+  height: 364px;
   background-image: url("/chalkboard.jpeg");
   background-size: cover;
   background-position: center;
   font-family: var(--homemade-apple);
+  border: 0.5rem solid #643D14;
   color: white;
   font-size: 1.2rem;
   @media (max-width: 1000px) {
@@ -48,6 +50,9 @@ export const MessageBoard = styled.div`
   background-position: center;
   font-family: var(--annie-use-your-telescope);
   color: white;
+  min-height: 364px;
+  border: 0.5rem solid #643D14;
+  margin: auto;
   font-size: 1.5rem;
   & a {
     color: white;
