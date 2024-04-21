@@ -1,6 +1,6 @@
 import { Container } from "./Messaging.styles";
 
-export function Messaging() {
+export default function Messaging() {
   return (
     <>
       <Container>
