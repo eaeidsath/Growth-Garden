@@ -8,6 +8,9 @@ export const LargeContainer = styled.div`
   grid-template-columns: 2fr 1fr;
   gap: 10px;
   /* Responsive layout */
+  @media (max-width: 1000px) {
+    margin-top: 13vh;
+  }
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
@@ -23,6 +26,16 @@ export const GardenBox = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 10px;
+`;
+
+export const Welcome = styled.span`
+  padding-left: 10%;
+  font-size: 2.5rem;
+  position: absolute;
+  margin-top: -6.25rem;
+  @media (max-width: 1000px) {
+    display: none;
+  }
 `;
 
 export const GoalCard = styled.div`

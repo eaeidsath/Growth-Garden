@@ -9,16 +9,8 @@ export const Nav = styled.nav`
 
 export const NavWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   text-align: center;
-`;
-
-export const Welcome = styled.span`
-  text-align: center;
-  align-items: center;
-  display: flex;
-  padding-left: 15%;
-  font-size: 2.5rem;
 `;
 
 export const NavButton = styled.button`

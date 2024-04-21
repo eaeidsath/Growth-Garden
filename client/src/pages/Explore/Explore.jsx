@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import Users from "../../components/Users/Users";
 
-import { Title, Alert } from './Explore.styles';
+import { Message, Alert } from './Explore.styles';
 
 import { ALL_USERS } from '../../utils/queries';
 import Auth from '../../utils/auth';
@@ -28,7 +28,7 @@ export default function Explore() {
 
   return (
     <>
-    <Title>Explore the Garden</Title>
+    <Message>Explore the Garden</Message>
       <Users
         users={users}
       />

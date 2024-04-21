@@ -7,13 +7,12 @@ import {
   Menu,
   NavLink,
   NavWrapper,
-  Welcome,
 } from "./Navbar.styles";
 
 import Auth from "../../utils/auth";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+
   const currentPage = useLocation().pathname;
 
   // Function to handle click event on navigation items
@@ -30,7 +29,6 @@ function Navbar() {
   return (
     <Nav>      
       <NavWrapper>
-        <Welcome>Hello There</Welcome>
         <Menu>
           <MenuItem>
             <NavLink

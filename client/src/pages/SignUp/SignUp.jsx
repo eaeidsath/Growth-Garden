@@ -4,6 +4,9 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import {
   Container,
   BoxWrapper,
@@ -84,13 +87,13 @@ function SignUp() {
               />
               <br />
               <br />
-              <SubmitButton type="submit">Sign Up</SubmitButton>
+              <SubmitButton type="submit">Sign Up <FontAwesomeIcon icon={faPaperPlane} /></SubmitButton>
             </SignUpForm>
           </SignUpContainer>
           <SignUpContainer>
             <Message>
               <p>
-                Already have an account? <a href="/"> Login! </a>
+                Already have an account? Please <a href="/"> Login! </a>
               </p>
             </Message>
           </SignUpContainer>
