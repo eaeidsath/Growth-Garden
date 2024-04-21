@@ -1,25 +1,29 @@
 import { styled } from "styled-components";
 
 export const LargeContainer = styled.div`
-margin-top: 40px;
-margin-left: 20px;
-margin-right: 10px;
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-gap: 10px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  @media (max-width: 1000px) {
+    margin-top: 12vh;
+    margin-bottom: 5vh;
+  }
 `;
 
 // Styled components for the contact card
 export const CardContainer = styled.div`
-background-color: var(--beaver);
-border-radius: 12px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-padding: 20px;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 20px;
-width: 200px;
+  background-color: var(--beaver);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 200px;
 `;
 
 export const ProfilePic = styled.img`
@@ -58,4 +62,3 @@ export const Button = styled.button`
     background-color: var(--dark-moss-green-2)};
   }
 `;
-
