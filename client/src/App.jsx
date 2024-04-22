@@ -46,10 +46,10 @@ export default function App() {
       <ApolloProvider client={client}>
         <GlobalStyle />
         <Header />
-
-        <Outlet />
-        <Messaging />
-
+        <Main>
+          <Outlet />
+          <Messaging />
+        </Main>
         <Footer />
       </ApolloProvider>
     </>
