@@ -50,8 +50,8 @@ export default function App() {
         <Header />
         <Main>
           <Outlet />
+          <Messaging />
         </Main>
-        <Messaging />
         <Footer />
       </ApolloProvider>
     </>
