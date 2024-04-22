@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import GlobalStyle from "./assets/Global.style";
-
+import Messaging from "./components/Messaging/Messaging";
 import styled from "styled-components";
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -46,10 +46,10 @@ export default function App() {
       <ApolloProvider client={client}>
         <GlobalStyle />
         <Header />
-        <Main>
-          <Outlet />
 
-        </Main>
+        <Outlet />
+        <Messaging />
+
         <Footer />
       </ApolloProvider>
     </>
