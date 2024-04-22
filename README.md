@@ -2,6 +2,16 @@
 
 Growth Garden is a web application designed to help users track their progress towards achieving their goals. By breaking down goals into smaller, manageable tasks, Growth Garden provides a visual representation of progress using a virtual garden.
 
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Features
 
 - **Goal Tracking**: Users can create and manage their goals within the application.
@@ -41,14 +51,25 @@ Growth Garden is a web application designed to help users track their progress t
 2. Create new goals and start tracking your progress.
 3. Log activities as you make progress towards your goals.
 4. Watch your virtual garden grow as you make progress!
+5. Add friends on the explore page, and see their posts on your dashboard.
+
+## Screenshots
+
+![MyGarden page](/client/public/screenshots/mygarden.jpg)
+
+![Example goal](/client/public/screenshots/examplegoal.png)
+
+![Dashboard page](/client/public/screenshots/dashboard.jpg)
+
+![Explore page](/client/public/screenshots/explore.png)
+
+## Contributing
+
+- Contributors: [kerilsen](https://github.com/kerilsen), [benitaisaac](https://github.com/benitaisaac), [eaeidsath](https://github.com/eaeidsath)
+- Contribution instructions: Contributions to this project are welcome, please contact one of the above developers to inquire about contributing.
 
 ## License
 
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 This project is licensed under the MIT License 
-
-
-
-
-
-
-
